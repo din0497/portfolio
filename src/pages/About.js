@@ -1,5 +1,7 @@
 const About = () => {
-    return <div>About</div>;
+    return <div>
+      Mening ismim Rivojiddin. Men programistman kjfasjkfsh
+    </div>;
   };
   
   export default About

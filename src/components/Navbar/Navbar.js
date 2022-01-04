@@ -4,10 +4,12 @@ import { Brand, Header } from "./style";
 
 const Navbar = () => {
   return (
-    <Header>
-      <Brand>Abdunazarov</Brand>
-      <Navs />
-    </Header>
+    <header>
+      <Header>
+        <Brand>Abdunazarov</Brand>
+        <Navs />
+      </Header>
+    </header>
   );
 };
 
