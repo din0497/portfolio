@@ -5,3 +5,10 @@
   text-align: center;
   justify-content: center;
 }
+
+.Container {
+  max-width: 1100px;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 55px
+}

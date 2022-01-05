@@ -13,7 +13,7 @@ export const Wrapper = styled.ul`
 `;
 
 export const Header = styled.nav`
-  max-width: 1000px;
+  max-width: 1100px;
   width: 90%;
   display: flex;
   align-items: center;

@@ -11,7 +11,6 @@ export const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
 
-  
   @media only screen and (max-width: 1060px) {
     flex-direction: column-reverse;
   }
@@ -24,7 +23,7 @@ export const ButtonWrapper = styled.div`
   gap: 5px;
   @media only screen and (max-width: 660px) {
     flex-direction: column;
-    margin-left: 25px;
+    /* margin-left: 25px; */
   }
 `;
 
@@ -46,15 +45,16 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
-display: flex;
-flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+`;
 export const MiniContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-margin-top:15px;
-@media only screen and (max-width: 800px) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 15px;
+  @media only screen and (max-width: 800px) {
     align-items: center;
   }
-`
+`;

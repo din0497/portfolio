@@ -7,9 +7,12 @@ export const BlogCart = styled.div`
 `;
 
 export const Img = styled.img`
-max-width: 100%;
-min-width: 100%;
-width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: 50vh;
+  max-height: 300px;
+  border-radius: 13px;
+  
 `;
 
 export const Title = styled.h3``;

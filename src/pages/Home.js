@@ -1,12 +1,17 @@
 import Blog from "../commons/Blog";
 import ShortIntro from "../components/Home/ShortIntro";
+import { BlogCartContainer } from "./style";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <ShortIntro />
-      <Blog/>
-    </div>
+      <BlogCartContainer>
+        <Blog />
+        <Blog />
+        <Blog />
+      </BlogCartContainer>
+    </>
   );
 };
 
