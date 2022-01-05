@@ -5,25 +5,25 @@ const Navs = () => {
   return (
     <Wrapper>
       <Nav>
-        <NavLink  style={{ textDecoration: "none" }} to="/home">
+        <NavLink  style={{ textDecoration: "none", color:'gray' }} to="/home">
           Home
         </NavLink>
       </Nav>
       <Nav>
-        <NavLink style={{ textDecoration: "none" }} to="/about">
+        <NavLink style={{ textDecoration: "none", color:'gray' }} to="/about">
           About
         </NavLink>
       </Nav>
       <Nav>
         <NavLink          
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: "none", color:'gray' }}
           to="/projects"
         >
           Projects
         </NavLink>
       </Nav>
       <Nav>
-        <NavLink style={{ textDecoration: "none" }} to="/blog">
+        <NavLink style={{ textDecoration: "none", color:'gray' }} to="/blog">
           Blog
         </NavLink>
       </Nav>

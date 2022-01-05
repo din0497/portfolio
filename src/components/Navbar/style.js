@@ -3,21 +3,23 @@ import styled from "styled-components";
 export const Wrapper = styled.ul`
   display: flex;
   align-items: center;
-  width: 100%;
-  gap: 50px;
+  width: 40%;
+  justify-content: space-between;
   list-style-type: none;
-  margin-left: 100px;
   margin-top: 25px;
 `;
 
 export const Header = styled.nav`
+  width: 90%;
   display: flex;
   align-items: center;
   height: 50px;
-  /* justify-content: space-evenly; */
+  padding: 0 35px;
+  justify-content: space-between;
 `;
 
 export const Nav = styled.li`
+  color: grey!important;
   font-size: 1.125rem;
   align-items: center;
   cursor: pointer;
