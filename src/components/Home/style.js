@@ -6,7 +6,7 @@ export const Img = styled.img`
   width: 233px;
 `;
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,9 +14,6 @@ export const Container = styled.div`
   
   @media only screen and (max-width: 1060px) {
     flex-direction: column-reverse;
-  }
-  @media only screen and (max-width: 690px) {
-    margin-left: 166px;
   }
 `;
 export const TextWrapper = styled.div``;
@@ -27,6 +24,7 @@ export const ButtonWrapper = styled.div`
   gap: 5px;
   @media only screen and (max-width: 660px) {
     flex-direction: column;
+    margin-left: 25px;
   }
 `;
 
@@ -46,3 +44,17 @@ export const Button = styled.button`
   cursor: pointer;
 }
 `;
+
+export const Container = styled.div`
+display: flex;
+flex-direction: column;
+`
+export const MiniContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-top:15px;
+@media only screen and (max-width: 800px) {
+    align-items: center;
+  }
+`
