@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import img from "../../assets/brand.png";
+import Blog from "../../commons/Blog";
 import {
   Button,
   ButtonWrapper,
@@ -38,6 +39,7 @@ const ShortIntro = () => {
         <h2>I love to share my knowledge by writing.</h2>
         <p style={{color:'grey'}}>Check out a few of my most recent publishings.</p>
       </MiniContainer>
+      <Blog/>
     </Container>
   );
 };
