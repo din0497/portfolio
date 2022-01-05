@@ -39,7 +39,7 @@ const ShortIntro = () => {
         <h2>I love to share my knowledge by writing.</h2>
         <p style={{color:'grey'}}>Check out a few of my most recent publishings.</p>
       </MiniContainer>
-      <Blog/>
+      {/* <Blog/> */}
     </Container>
   );
 };
