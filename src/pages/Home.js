@@ -4,6 +4,7 @@ import { BlogCartContainer } from "./style";
 import img1 from "../assets/img1.jpg";
 import img from "../assets/img.jpg";
 import { Button } from "../components/Home/style";
+import { Link } from "react-router-dom";
 
 let blogs = [
   {
@@ -30,7 +31,13 @@ const Home = () => {
   return (
     <>
       <ShortIntro />
-      <div style={{ display: "flex", flexDirection: "column", alignItems:'start'}}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "start",
+        }}
+      >
         <BlogCartContainer>
           {blogs.map((blog, i) => {
             return (
@@ -43,8 +50,10 @@ const Home = () => {
             );
           })}
         </BlogCartContainer>
-        <div >
-          <Button type="true">See all articles</Button>
+        <div style={{ margin: "60px 0 0 26px" }}>
+          <Link to="/blog">
+            <Button type="true">See All articles</Button>
+          </Link>
         </div>
       </div>
     </>

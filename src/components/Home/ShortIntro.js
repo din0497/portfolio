@@ -18,6 +18,7 @@ const ShortIntro = () => {
             style={{
               lineHeight: "1.5",
               fontSize: "2.5rem",
+              margin:'20px'
             }}
           >
             I'm Rivojiddin. I'm a developer and <br/>blogger working at Genius

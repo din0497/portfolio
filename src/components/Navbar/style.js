@@ -18,10 +18,11 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   height: 50px;
-  padding: 0 35px;
+  /* padding: 0 35px; */
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+  /* position: relative; */
 `;
 
 export const Nav = styled.li`
