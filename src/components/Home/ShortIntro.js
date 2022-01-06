@@ -21,7 +21,7 @@ const ShortIntro = () => {
               margin:'20px'
             }}
           >
-            I'm Rivojiddin. I'm a developer and <br/>blogger working at Genius
+            I'm <span style={{color: 'rgb(20 184 166)'}}>Rivojiddin</span>. I'm a developer and <br/>blogger working at Genius
             ID.
           </h1>
           <ButtonWrapper>

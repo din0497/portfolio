@@ -45,6 +45,7 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
+margin-top: 3em;
   display: flex;
   flex-direction: column;
   padding-left: 50px;
@@ -57,7 +58,7 @@ export const MiniContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 15px;
+  margin-top: 6em;
   @media only screen and (max-width: 800px) {
     align-items: center;
   }

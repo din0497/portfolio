@@ -39,4 +39,6 @@ export const Nav = styled.li`
 
 export const Brand = styled.div`
   font-size: 1.5rem;
+  color: rgb(20 184 166);
+  font-weight: 600;
 `;
