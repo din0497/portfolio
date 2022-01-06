@@ -22,7 +22,19 @@ export const Header = styled.header`
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  /* position: relative; */
+
+  animation: nav-load 300ms ease-in;
+
+@keyframes nav-load {
+  0%{
+      transform: translateY(-100%);
+  }
+
+  100%{
+    transform: translateY(0%);
+
+  }
+}
 `;
 
 export const Nav = styled.li`
