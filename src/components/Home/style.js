@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Img = styled.img`
-  border-radius: 100px;
+  /* border-radius: 100px; */
   /* box-shadow: 5px 10px 18px #888888; */
   width: 233px;
 `;
@@ -45,13 +45,13 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
-margin-top: 3em;
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   padding-left: 50px;
+  position: relative;
   @media only screen and (max-width: 800px) {
     padding-left: 0;
-
   }
 `;
 export const MiniContainer = styled.div`
@@ -62,4 +62,38 @@ export const MiniContainer = styled.div`
   @media only screen and (max-width: 800px) {
     align-items: center;
   }
+`;
+
+export const Gradient = styled.div`
+ @media only screen and (max-width: 1060px) {
+    display: none;
+  }
+  left:0;
+  mix-blend-mode: multiply;
+  background-image: radial-gradient(
+    closest-side,
+    #2dd4bf,
+    rgba(233, 168, 2, 0)
+  );
+  border-radius: 40rem;
+  width: 426px;
+  height: 500px;
+  position: absolute;
+  z-index: -1;
+  -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+    
 `;

@@ -4,6 +4,8 @@ import {
   Button,
   ButtonWrapper,
   Container,
+  Gradient,
+  GradientP,
   Img,
   MiniContainer,
   TextWrapper,
@@ -35,6 +37,7 @@ const ShortIntro = () => {
         </TextWrapper>
         <Img src={img} />
       </Wrapper>
+      <Gradient/>
       <MiniContainer>
         <h2>I love to share my knowledge by writing.</h2>
         <p style={{ color: "grey" }}>
