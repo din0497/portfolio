@@ -12,7 +12,7 @@ export const Wrapper = styled.ul`
   }
 `;
 
-export const Header = styled.nav`
+export const Header = styled.header`
   max-width: 1100px;
   width: 90%;
   display: flex;

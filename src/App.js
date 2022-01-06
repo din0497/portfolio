@@ -8,9 +8,9 @@ import Projects from "./pages/Projects";
 
 function App() {
   return (
-    <div className="App">
+    <div className="header">
       <Navbar />
-      <div className="Container">
+      <div className="main">
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
