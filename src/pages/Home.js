@@ -3,6 +3,7 @@ import ShortIntro from "../components/Home/ShortIntro";
 import { BlogCartContainer } from "./style";
 import img1 from "../assets/img1.jpg";
 import img from "../assets/img.jpg";
+import { Button } from "../components/Home/style";
 
 let blogs = [
   {
@@ -29,18 +30,23 @@ const Home = () => {
   return (
     <>
       <ShortIntro />
-      <BlogCartContainer>
-        {blogs.map((blog, i) => {
-          return (
-            <Blog
-              key={i}
-              img={blog.img}
-              title={blog.title}
-              date={blog.date}
-            />
-          );
-        })}
-      </BlogCartContainer>
+      <div style={{ display: "flex", flexDirection: "column", alignItems:'start'}}>
+        <BlogCartContainer>
+          {blogs.map((blog, i) => {
+            return (
+              <Blog
+                key={i}
+                img={blog.img}
+                title={blog.title}
+                date={blog.date}
+              />
+            );
+          })}
+        </BlogCartContainer>
+        <div >
+          <Button type="true">See all articles</Button>
+        </div>
+      </div>
     </>
   );
 };
