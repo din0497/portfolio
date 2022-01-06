@@ -4,6 +4,9 @@ export const BlogCart = styled.div`
   display: flex;
   flex-direction: column;
   width: 30%;
+  @media only screen and (max-width: 600px) {
+    width: 81%;
+  }
 `;
 
 export const Img = styled.img`

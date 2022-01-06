@@ -48,6 +48,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 50px;
+  @media only screen and (max-width: 800px) {
+    padding-left: 0;
+
+  }
 `;
 export const MiniContainer = styled.div`
   display: flex;

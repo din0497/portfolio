@@ -25,7 +25,7 @@ const ShortIntro = () => {
           </h1>
           <ButtonWrapper>
             <Link to="/blog">
-              <Button type={true}>Read my blogs</Button>
+              <Button type='true'>Read my blogs</Button>
             </Link>
             <Link to="#">
               <Button>Download CV</Button>
