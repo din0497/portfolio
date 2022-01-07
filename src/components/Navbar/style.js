@@ -41,7 +41,6 @@ export const Nav = styled.li`
   color: grey !important;
   font-size: 1.125rem;
   align-items: center;
-  cursor: pointer;
   padding: 4px 15px;
   &:hover {
     background-color: #e8edea;

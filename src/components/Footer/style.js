@@ -29,3 +29,8 @@ export const ContactContainer = styled.div`
   justify-content: space-between;
   color: rgb(75 85 99);
 `;
+
+export const A = styled.a`
+ text-decoration:none;
+ color: rgb(75 85 99);
+`
