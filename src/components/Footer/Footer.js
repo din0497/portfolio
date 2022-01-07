@@ -1,3 +1,4 @@
+import Contact from "./Contact";
 import { FootContainer, FootNavsWrapper, FootNav } from "./style";
 
 const Footer = () => {
@@ -10,6 +11,7 @@ const Footer = () => {
         <FootNav>Projects</FootNav>
         <FootNav>Blog</FootNav>
       </FootNavsWrapper>
+      <Contact/>
     </FootContainer>
   );
 };
