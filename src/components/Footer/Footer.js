@@ -1,15 +1,15 @@
-import { FootContainer } from "./style";
+import { FootContainer, FootNavsWrapper, FootNav } from "./style";
 
 const Footer = () => {
   return (
     <FootContainer>
-      <ul>
+      <FootNavsWrapper>
         <h3>General</h3>
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Blog</li>
-      </ul>
+        <FootNav>Home</FootNav>
+        <FootNav>About</FootNav>
+        <FootNav>Projects</FootNav>
+        <FootNav>Blog</FootNav>
+      </FootNavsWrapper>
     </FootContainer>
   );
 };

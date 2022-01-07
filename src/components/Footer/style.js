@@ -5,6 +5,14 @@ export const FootContainer = styled.footer`
   width: 90%;
   border-top: grey 1px solid;
 `
-export const FootNavsContainer = styled.ul``
+export const FootNavsWrapper = styled.ul`
+ text-align: start;
+ gap: 5px;
+ 
+`
 
-export const FootNavs = styled.li``
+export const FootNav = styled.li`
+ list-style-type:none;
+ color: rgb(75 85 99);
+ margin-bottom: 1em;
+`
