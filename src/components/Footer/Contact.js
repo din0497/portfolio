@@ -1,17 +1,20 @@
 import { VscGithubAlt } from "react-icons/vsc";
-import {FiFacebook} from 'react-icons/fi'
-import {TiSocialLinkedin} from 'react-icons/ti'
-import {RiTelegramLine} from 'react-icons/ri'
-import { IconContainer } from "./style";
+import { FiFacebook } from "react-icons/fi";
+import { TiSocialLinkedin } from "react-icons/ti";
+import { RiTelegramLine } from "react-icons/ri";
+import { ContactContainer, IconContainer } from "./style";
 
 const Contact = () => {
   return (
-    <IconContainer >
-      <VscGithubAlt />
-      <TiSocialLinkedin />
-      <FiFacebook />
-      <RiTelegramLine/>
-    </IconContainer>
+    <ContactContainer>
+        <p>© {new Date().getFullYear()} Abdunazarov Rivojiddin</p>
+      <IconContainer>
+        <VscGithubAlt size={25} />
+        <TiSocialLinkedin size={35} />
+        <FiFacebook size={25} />
+        <RiTelegramLine size={25} />
+      </IconContainer>
+    </ContactContainer>
   );
 };
 

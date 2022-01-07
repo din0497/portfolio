@@ -1,4 +1,5 @@
 import Contact from "./Contact";
+import {NavLink} from 'react-router-domg'
 import { FootContainer, FootNavsWrapper, FootNav } from "./style";
 
 const Footer = () => {
