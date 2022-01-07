@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const Img = styled.img`
-  /* border-radius: 100px; */
-  /* box-shadow: 5px 10px 18px #888888; */
   width: 233px;
+  transition: width 2s, height 2s, transform 2s;
+  &:hover{
+    transform: scale(2, 2);
+ }
 `;
 
 export const Wrapper = styled.div`

@@ -33,4 +33,8 @@ export const ContactContainer = styled.div`
 export const A = styled.a`
  text-decoration:none;
  color: rgb(75 85 99);
+ &:hover{
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+ }
 `
