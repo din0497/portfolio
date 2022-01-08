@@ -1,5 +1,5 @@
 import { Title } from "../../commons/Title";
-import { AboutContainer, Article, Paragraph } from "./style";
+import { AboutContainer, Article, Line, MeSection, Paragraph } from "./style";
 import me from "../../assets/me.jpg";
 import { Me } from "./style";
 
@@ -27,9 +27,7 @@ const About = () => {
           multi-million dollar companies.
         </Paragraph>
       </Article>
-      <section
-        style={{ display: "flex", flexDirection: "row", maxWidth: "56rem" }}
-      >
+      <MeSection>
         <Me src={me} />
         <Article>
           <Paragraph>
@@ -43,6 +41,25 @@ const About = () => {
             also help run a mediocre podcast.
           </Paragraph>
         </Article>
+      </MeSection>
+
+      <section
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "start",
+          paddingLeft: "37px",
+        }}
+      >
+        <h1>Work Experience</h1>
+        <Paragraph>
+          Here's a brief rundown of my most recent experiences.
+        </Paragraph>
+        <section style={{ display: "flex", flexDirection: "row", alignItems:'center'}}>
+          <div>Company</div>
+          <Line />
+          <div>Full-stack 2012-now</div>
+        </section>
       </section>
     </AboutContainer>
   );
