@@ -1,9 +1,9 @@
-import Blog from "../commons/Blog";
-import ShortIntro from "../components/Home/ShortIntro";
-import { BlogCartContainer } from "./style";
-import img1 from "../assets/img1.jpg";
-import img from "../assets/img.jpg";
-import { Button } from "../components/Home/style";
+import Blog from "../../commons/Blog";
+import ShortIntro from "../../components/Home/ShortIntro";
+import { BlogCartContainer } from "../Home/style";
+import img1 from "../../assets/img1.jpg";
+import img from "../../assets/img.jpg";
+import { Button } from "../../components/Home/style";
 import { Link } from "react-router-dom";
 
 let blogs = [
