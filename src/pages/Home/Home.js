@@ -50,7 +50,7 @@ const Home = () => {
             );
           })}
         </BlogCartContainer>
-        <div style={{ margin: "60px 0 0 26px" }}>
+        <div style={{ margin: "4em 0 0 3em" }}>
           <Link to="/blog">
             <Button type="true">See All articles</Button>
           </Link>

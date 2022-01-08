@@ -1,28 +1,46 @@
 import { Title } from "../../commons/Title";
-import { AboutContainer } from "./style";
+import { AboutContainer, Article, Paragraph } from "./style";
+import me from '../../assets/me.jpg'
 
 const About = () => {
   return (
     <AboutContainer>
       <Title>ABOUT ME</Title>
-      <h1>Here`s my story</h1>
-      <p style={{ maxWidth: "887px", textAlign: "start", color: 'gray' }}>
-        I’m Braydon, a developer, creative coder, blogger and self-proclaimed
-        designer who specializes in front-end development. My mission is to
-        translate user-focussed designs into pixel-perfect websites or
-        applications that run blazing fast.
-      </p>
-      {/* <p>
-        I’m currently working as a senior full-stack engineer at Cognizant where
-        I help architect and develop full-stack RESTful microservices, train and
-        prepare developers for delivery, and assist in leading the front-end
-        practice in a lab-based working environment.
-      </p>
-      <p>
-        Before Cognizant, I worked as a UI Developer for projekt202 helping
-        craft design systems and building reusable component libraries for
-        multi-million dollar companies.
-      </p> */}
+      <Article>
+        <h1>Here`s my story</h1>
+        <Paragraph>
+          I’m Braydon, a developer, creative coder, blogger and self-proclaimed
+          designer who specializes in front-end development. My mission is to
+          translate user-focussed designs into pixel-perfect websites or
+          applications that run blazing fast.
+        </Paragraph>
+        <Paragraph>
+          I’m currently working as a senior full-stack engineer at Cognizant
+          where I help architect and develop full-stack RESTful microservices,
+          train and prepare developers for delivery, and assist in leading the
+          front-end practice in a lab-based working environment.
+        </Paragraph>
+        <Paragraph>
+          Before Cognizant, I worked as a UI Developer for projekt202 helping
+          craft design systems and building reusable component libraries for
+          multi-million dollar companies.
+        </Paragraph>
+      </Article>
+      <section>
+
+        <Article>
+          <Paragraph>
+            In a past life, I was an indie mobile developer making mobile games
+            for iOS and Android, with one of my games outselling Angry Birds.
+          </Paragraph>
+          <Paragraph>
+            You can find me on Twitter where I share tech-related tidbits and
+            build in public, or you can follow me on GitHub. I often write about
+            my findings on my blog and create cool things over on CodePen. I
+            also help run a mediocre podcast.
+          </Paragraph>
+        </Article>
+      </section>
     </AboutContainer>
   );
 };
