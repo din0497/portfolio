@@ -1,6 +1,7 @@
 import { Title } from "../../commons/Title";
 import { AboutContainer, Article, Paragraph } from "./style";
-import me from '../../assets/me.jpg'
+import me from "../../assets/me.jpg";
+import { Me } from "./style";
 
 const About = () => {
   return (
@@ -26,8 +27,10 @@ const About = () => {
           multi-million dollar companies.
         </Paragraph>
       </Article>
-      <section>
-
+      <section
+        style={{ display: "flex", flexDirection: "row", maxWidth: "56rem" }}
+      >
+        <Me src={me} />
         <Article>
           <Paragraph>
             In a past life, I was an indie mobile developer making mobile games
