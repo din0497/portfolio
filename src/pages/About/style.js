@@ -10,7 +10,7 @@ export const Article = styled.article`
 `;
 
 export const Paragraph = styled.p`
-  max-width: 56rem;
+  max-width: 65rem;
   font-size: 18px;
   text-align: start;
   color: gray;

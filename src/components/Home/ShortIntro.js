@@ -21,8 +21,8 @@ const ShortIntro = () => {
             blogger working at Genius ID.
           </IntroH1>
           <ButtonWrapper>
-            <Link to="/blog">
-              <Button type="true">Read my blogs</Button>
+            <Link to="/about">
+              <Button type="true">More About me</Button>
             </Link>
             <Link to="#">
               <Button>Download CV</Button>
