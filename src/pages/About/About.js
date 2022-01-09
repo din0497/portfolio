@@ -2,6 +2,7 @@ import { Title } from "../../commons/Title";
 import { AboutContainer, Article, Line, MeSection, Paragraph } from "./style";
 import me from "../../assets/me.jpg";
 import { Me } from "./style";
+import RecentBlogs from "../../commons/RecentBlogs";
 
 const About = () => {
   return (
@@ -42,8 +43,8 @@ const About = () => {
           </Paragraph>
         </Article>
       </MeSection>
-
-      <section
+      <RecentBlogs />
+      {/* <section
         style={{
           display: "flex",
           flexDirection: "column",
@@ -60,7 +61,7 @@ const About = () => {
           <Line />
           <div>Full-stack 2012-now</div>
         </section>
-      </section>
+      </section> */}
     </AboutContainer>
   );
 };

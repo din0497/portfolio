@@ -5,9 +5,8 @@ import {
   ButtonWrapper,
   Container,
   Gradient,
-  GradientP,
   Img,
-  MiniContainer,
+  IntroH1,
   TextWrapper,
   Wrapper,
 } from "./style";
@@ -16,19 +15,14 @@ const ShortIntro = () => {
     <Container>
       <Wrapper>
         <TextWrapper>
-          <h1
-            style={{
-              lineHeight: "1.5",
-              fontSize: "2.5rem",
-              margin:'20px'
-            }}
-          >
-            I'm <span style={{color: 'rgb(20 184 166)'}}>Rivojiddin</span>. I'm a developer and <br/>blogger working at Genius
-            ID.
-          </h1>
+          <IntroH1>
+            I'm <span style={{ color: "rgb(20 184 166)" }}>Rivojiddin</span>.
+            I'm a developer and <br />
+            blogger working at Genius ID.
+          </IntroH1>
           <ButtonWrapper>
             <Link to="/blog">
-              <Button type='true'>Read my blogs</Button>
+              <Button type="true">Read my blogs</Button>
             </Link>
             <Link to="#">
               <Button>Download CV</Button>
@@ -37,13 +31,7 @@ const ShortIntro = () => {
         </TextWrapper>
         <Img src={img} />
       </Wrapper>
-      <Gradient/>
-      <MiniContainer>
-        <h2>I love to share my knowledge by writing.</h2>
-        <p style={{ color: "grey" }}>
-          Check out a few of my most recent publishings.
-        </p>
-      </MiniContainer>
+      <Gradient />
     </Container>
   );
 };

@@ -1,5 +1,7 @@
+import { Title } from "../../commons/Title";
+
 const Blog = () => {
-  return <div>Blog</div>;
+  return <Title>MY BLOG</Title>;
 };
 
 export default Blog;

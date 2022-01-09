@@ -6,11 +6,13 @@ import Blog from "./pages/Blogs/Blog";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Footer from "./components/Footer/Footer";
+import { BlogCartContainer } from "./pages/Home/style";
 
 function App() {
   return (
     <div className="header">
-      <Navbar />
+      <Navbar/>
+      <BlogCartContainer/>
       <div className="main">
         <Routes>
           <Route path="/home" element={<Home />} />

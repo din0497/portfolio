@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Img = styled.img`
   width: 233px;
   transition: width 2s, height 2s, transform 2s;
-  &:hover{
+  &:hover {
     transform: scale(2, 2);
- }
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -23,9 +23,9 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 5px;
+  max-width: 500px;
   @media only screen and (max-width: 660px) {
     flex-direction: column;
-    /* margin-left: 25px; */
   }
 `;
 
@@ -54,16 +54,6 @@ export const Container = styled.div`
   position: relative;
   @media only screen and (max-width: 800px) {
     padding-left: 0;
-  }
-
-`;
-export const MiniContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 6em;
-  @media only screen and (max-width: 800px) {
-    align-items: center;
   }
 `;
 
@@ -99,4 +89,14 @@ export const Gradient = styled.div`
         transform:rotate(360deg); 
     } 
     
+`;
+
+export const IntroH1 = styled.h1`
+  line-height: 1.5;
+  font-size: 2.5rem;
+  text-align: left;
+  @media only screen and (max-width: 1000px) {
+    margin: 20px;
+    text-align: center;
+  }
 `;
