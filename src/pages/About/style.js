@@ -38,9 +38,32 @@ export const MeSection = styled.section`
   }
 `;
 
-export const Line = styled.span`
- border-top: grey dashed 1px;
- width: 100px;
- margin: 0 10px;
-`
+export const Line = styled.div`
+  border-bottom: grey dashed 1px;
+  width: 100%;
+  margin: 0 10px;
+`;
 
+export const ExperienceSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 65px;
+`;
+export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContainerWork = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+`;
+
+export const Work = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+
+`
