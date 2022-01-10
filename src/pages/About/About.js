@@ -25,7 +25,7 @@ const About = () => {
         </Paragraph>
         <Paragraph>
           I`m currently working as a frontend engineer at Genius Id where I help
-          architect,develop and test frontend parts and assist in leading the
+          architect, develop and test frontend parts and assist in leading the
           front-end practice in a lab-based working environment.
         </Paragraph>
         <Paragraph>
