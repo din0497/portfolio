@@ -10,7 +10,7 @@ import {
 const Experience = () => {
   return (
     <ExperienceSection>
-      <Text>
+      {/* <Text>
         <h1 style={{ textAlign: "start" }}>Work Experience</h1>
         <Paragraph>
           Here's a brief rundown of my most recent experiences.
@@ -32,7 +32,7 @@ const Experience = () => {
           <Line />
           <div style={{ width: "250px" }}>Frontend 2020</div>
         </Work>
-      </ContainerWork>
+      </ContainerWork> */}
     </ExperienceSection>
   );
 };
