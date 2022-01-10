@@ -1,15 +1,12 @@
-import { RecentBlogs } from "../../commons/RecentBlogs";
 import { Title } from "../../commons/Title";
-import Experience from "../About/Experince";
+import { ProductContainer } from "./style";
 
 const Projects = () => {
   return (
-    <>
+    <ProductContainer>
       <Title>PROJECTS</Title>
-      <RecentBlogs/>
-
-      {/* <Experience/> */}
-    </>
+      <h1>A selection of my favorite works.</h1>
+    </ProductContainer>
   );
 };
 
