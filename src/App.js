@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import About from "./pages/About/About";
 import Blog from "./pages/Blogs/Blog";
 import Home from "./pages/Home/Home";
@@ -10,7 +10,7 @@ import { BlogCartContainer } from "./pages/Home/style";
 
 function App() {
   return (
-    <div className="header">
+    <main className="header">
       <Navbar/>
       <BlogCartContainer/>
       <div className="main">
@@ -19,10 +19,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </div>
       <Footer/>
-    </div>
+    </main>
   );
 }
 
