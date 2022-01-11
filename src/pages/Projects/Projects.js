@@ -3,7 +3,7 @@ import Description from "./Description";
 import { ProductContainer, Img, DesWrapper, Back } from "./style";
 import project from "../../assets/project.png";
 import loadfetcher from "../../assets/loadfetcher.png";
-import hotel2 from "../../assets/hotel.png";
+import hotel2 from "../../assets/hotel2.png";
 
 
 const Projects = () => {
