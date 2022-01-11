@@ -18,7 +18,7 @@ export const DesWrapper = styled.div`
   margin-top: 50px;
   @media only screen and (max-width: 800px) {
     flex-direction: column;
-    padding-left:30px;
+    align-items: center;
   }
 `;
 
@@ -48,3 +48,7 @@ export const Back = styled.div`
   position: relative;
   border-radius: 15px 15px 0px 0px;
 `;
+
+export const ButtonWrap = styled.div`
+text-align:start;
+`

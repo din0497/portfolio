@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <ProductContainer>
       <Title>PROJECTS</Title>
-      <h1>A selection of my favorite works.</h1>
+      <h1 style={{ padding:'0 8px'}}>A selection of my favorite works.</h1>
       <DesWrapper>
         <Description
           title="LoadFetcher"
