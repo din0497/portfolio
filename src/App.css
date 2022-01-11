@@ -20,3 +20,8 @@
     /* position: absolute; */
   }
 }
+
+.active{
+border-bottom:rgb(20 184 166) solid 2px ;
+color: black!important;
+}

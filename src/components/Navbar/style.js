@@ -38,7 +38,7 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.li`
-  color: grey !important;
+  color: grey ;
   font-size: 1.125rem;
   align-items: center;
   padding: 4px 15px;

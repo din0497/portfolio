@@ -1,11 +1,11 @@
 import { Nav, Wrapper } from "./style";
 import { NavLink } from "react-router-dom";
-
+import '../../App.css'
 const Navs = () => {
   return (
     <Wrapper>
       <Nav>
-        <NavLink  style={{ textDecoration: "none", color:'gray' }} to="/home">
+        <NavLink activeClassName='active' style={{ textDecoration: "none", color:'gray' }} to="/home">
           Home
         </NavLink>
       </Nav>
