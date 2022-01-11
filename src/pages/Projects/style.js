@@ -38,6 +38,7 @@ export const Img = styled.img`
   transition: width 2s, height 2s, transform 2s;
   &:hover {
     transform: scale(2, 2);
+    z-index: 1;
   }
 `;
 
