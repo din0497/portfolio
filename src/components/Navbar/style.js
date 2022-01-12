@@ -80,7 +80,7 @@ export const DropUl = styled.ul`
   gap: 30px;
   border-radius: 10px;
   position: fixed;
-  right: 50px;
+  right: 20px;
 `;
 export const DropLi = styled.li`
   list-style-type: none;
