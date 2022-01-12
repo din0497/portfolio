@@ -5,7 +5,7 @@ const Navs = () => {
   return (
     <Wrapper>
       <Nav>
-        <NavLink activeClassName='active' style={{ textDecoration: "none", color:'gray' }} to="/home">
+        <NavLink activeclassname='active' style={{ textDecoration: "none", color:'gray' }} to="/home">
           Home
         </NavLink>
       </Nav>

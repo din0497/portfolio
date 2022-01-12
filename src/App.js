@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes, Navigate } from "react-router-dom";
@@ -7,12 +8,15 @@ import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import { BlogCartContainer } from "./pages/Home/style";
+import Dropdown from "./components/Navbar/Dropdown";
 
 function App() {
+  const [drop, setDrop] = useState("hidden");
   return (
     <main className="header">
-      <Navbar/>
-      <BlogCartContainer/>
+      <Navbar drop={drop} setDrop={setDrop} />
+      {drop === "visible" && <Dropdown setDrop={setDrop} />}
+      <BlogCartContainer />
       <div className="main">
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -22,10 +26,9 @@ function App() {
           <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </main>
   );
 }
 
 export default App;
-
