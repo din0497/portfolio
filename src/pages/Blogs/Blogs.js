@@ -1,7 +1,7 @@
 import { Title } from "../../commons/Title";
-import { blogs } from "../Home/Home";
-import { BlogGrid } from "./style";
-import Blog from "../../commons/Blog";
+// import { blogs } from "../Home/Home";
+// import { BlogGrid } from "./style";
+// import Blog from "../../commons/Blog";
 
 const Blogs = () => {
   return <Title>BLOG</Title>
