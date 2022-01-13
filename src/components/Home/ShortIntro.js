@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import img from "../../assets/brand.png";
+import cv from "../../assets/CV_Rivojiddin Abdunazarov.pdf"
 import {
   Button,
   ButtonWrapper,
@@ -24,9 +25,7 @@ const ShortIntro = () => {
             <Link to="/about">
               <Button type="true">More About me</Button>
             </Link>
-            <Link to="#">
-              <Button>Download CV</Button>
-            </Link>
+              <Button><a href={cv} download style={{textDecoration:'none', color: '#4b5563'}}>Download CV</a></Button>
           </ButtonWrapper>
         </TextWrapper>
         <Img src={img} />

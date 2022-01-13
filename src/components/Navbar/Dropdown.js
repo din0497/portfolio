@@ -9,7 +9,7 @@ const Dropdown = ({ setDrop }) => {
   return (
     <DropContainer onClick={clickHandler}>
       <DropUl onClick={(e) => e.stopPropagation()}>
-        <DropButton onClick={clickHandler} to="hom" text="Home" />
+        <DropButton onClick={clickHandler} to="/" text="Home" />
         <DropButton onClick={clickHandler} to="/about" text="About" />
         <DropButton onClick={clickHandler} to="/projects" text="Projects" />
         <DropButton onClick={clickHandler} to="/blog" text="Blog" />
