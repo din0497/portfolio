@@ -1,4 +1,4 @@
-import { Title } from "../../commons/Title";
+// import { Title } from "../../commons/Title";
 import { blogs } from "../Home/Home";
 import { BlogGrid } from "./style";
 import Blog from "../../commons/Blog";
