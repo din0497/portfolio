@@ -19,11 +19,10 @@ function App() {
       <BlogCartContainer />
       <div className="main">
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </div>
       <Footer />
