@@ -8,7 +8,7 @@ const Footer = () => {
       <FootNavsWrapper>
         <h3>General</h3>
         <FootNav>
-          <NavLink style={{ textDecoration: "none", color: "gray" }} to="/home">
+          <NavLink style={{ textDecoration: "none", color: "gray" }} to="/">
             Home
           </NavLink>
         </FootNav>
