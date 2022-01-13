@@ -2,14 +2,13 @@ import { Title } from "../../commons/Title";
 import {
   AboutContainer,
   Article,
-  ExperienceSection,
   MeSection,
   Paragraph,
 } from "./style";
 import me from "../../assets/me.jpg";
 import { Me } from "./style";
 import RecentBlogs from "../../commons/RecentBlogs";
-import Experience from "./Experince";
+
 
 const About = () => {
   return (

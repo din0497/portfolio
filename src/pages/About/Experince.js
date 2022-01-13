@@ -1,10 +1,5 @@
 import {
-  ContainerWork,
   ExperienceSection,
-  Line,
-  Paragraph,
-  Text,
-  Work,
 } from "./style";
 
 const Experience = () => {

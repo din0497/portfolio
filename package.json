@@ -13,7 +13,7 @@
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.2"
-  }, 
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -37,8 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
   }
 }
