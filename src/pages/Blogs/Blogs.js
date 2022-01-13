@@ -1,17 +1,18 @@
 import { Title } from "../../commons/Title";
 import { blogs } from "../Home/Home";
 import { BlogGrid } from "./style";
+import Blog from "../../commons/Blog";
 
-const Blog = () => {
+const Blogs = () => {
   return (
     <BlogGrid>
-      {blogs.map((blog, i) => {
+      {/* {blogs.map((blog, i) => {
         return (
           <Blog key={i} img={blog.img} title={blog.title} date={blog.date} />
         );
-      })}
+      })} */}
     </BlogGrid>
   );
 };
 
-export default Blog;
+export default Blogs;
