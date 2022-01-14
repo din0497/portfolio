@@ -2,11 +2,13 @@ import { Title } from "../../commons/Title";
 import { blogs } from "../Home/Home";
 import { BlogGrid } from "./style";
 import Blog from "./Blog";
+import CreateBlog from "./CreateBlog";
 
 const Blogs = () => {
   return (
-    <div>
+    <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
       <Title>BLOG</Title>
+      <CreateBlog />
       <BlogGrid>
         {blogs
           .map((blog, i) => {

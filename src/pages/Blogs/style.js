@@ -23,4 +23,14 @@ export const BlogCart = styled.div`
 `;
 
 export const CreateContainer = styled.div`
+  width: 90%;
+  color: rgba(51,51,51);
+  background-color: rgba(245,247,250);
+  border: rgba(229,231,235) solid 1px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+ 
 `

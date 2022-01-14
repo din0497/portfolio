@@ -9,6 +9,7 @@ import Projects from "./pages/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import { BlogCartContainer } from "./pages/Home/style";
 import Dropdown from "./components/Navbar/Dropdown";
+import CreatePost from "./pages/Blogs/CreatePost";
 
 function App() {
   const [drop, setDrop] = useState("hidden");
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blogs />} />
+          <Route path='blog/:create' element={<CreatePost/>}/>
         </Routes>
       </div>
       <Footer />
