@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 
 const CreateBlog = () => {
   return (
-    <Link style={{textDecoration:'none', width: '100%', display: 'flex', justifyContent:'center'}} to="create">
+    <Link
+      style={{
+        textDecoration: "none",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+      }}
+      to="create"
+    >
       <CreateContainer>
         <div
           style={{
@@ -28,7 +36,7 @@ const CreateBlog = () => {
           <h3>Create a blog</h3>
         </div>
       </CreateContainer>
-    // </Link>
+    </Link>
   );
 };
 

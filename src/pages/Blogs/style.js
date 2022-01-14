@@ -34,3 +34,17 @@ export const CreateContainer = styled.div`
   cursor: pointer;
  
 `
+
+export const Posting = styled.div`
+display: flex;
+flex-direction: column;
+`
+
+export const Textarea = styled.textarea`
+`
+export const Addons = styled.div``
+
+export const AddonsContainer = styled.div``
+
+
+
