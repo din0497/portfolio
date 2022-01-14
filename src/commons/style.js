@@ -17,12 +17,15 @@ export const Img = styled.img`
   border-radius: 13px;
 `;
 
-export const Title = styled.h3``;
+export const Title = styled.h3`
+ text-align:left;
+`;
 
 export const RecentBlogsContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 6em;
+  text-align: left;
   /* align-items: left; */
   /* border: red solid 1px; */
 `;
