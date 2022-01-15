@@ -1,7 +1,19 @@
-import { Posting } from "./style";
+import { newdate, Posting } from "./style";
+import { useState } from "react";
 import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
 import { MdAddAPhoto, MdOutlineTitle } from "react-icons/md";
-const CreatePost = () => {
+import img from '../../assets/img.jpg';
+
+const CreatePost = ({setBlog}) => {
+ const [title, setTitle] = useState();
+ const [story, setStory] = useState();
+
+ const getTitle = (e) => setTitle(e.target.value);
+ const getStory = (e) => setStory(e.target.value);
+
+ const clickHandler = () => {
+   setBlog(prev => [...prev, {title: title, story: story, img: img, date: newdate}])
+ }
   return (
     <Posting>
       <AddonsContainer>
@@ -13,9 +25,11 @@ const CreatePost = () => {
           <MdOutlineTitle />
           <h5>Add subtitle</h5>
         </Addons>
+        <h5 onClick={clickHandler}>Publish</h5>
       </AddonsContainer>
-      <Textarea placeholder="Title…" />
-      <TextareaStory placeholder="Tell your story…" />
+      <Textarea onChange={getTitle} placeholder="Title…" />
+      {/* <Textarea size='S' placeholder="Enter subtitle(Optional)" /> */}
+      <TextareaStory onChange={getStory} placeholder="Tell your story…" />
     </Posting>
   );
 };

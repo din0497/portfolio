@@ -1,11 +1,10 @@
 import { Title } from "../../commons/Title";
-import { blogs } from "../Home/Home";
 import { BlogGrid } from "./style";
 import Blog from "./Blog";
 import CreateBlog from "./CreateBlog";
-import CreatePost from "./CreatePost";
 
-const Blogs = () => {
+const Blogs = ({blogs}) => {
+
   return (
     <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
       <Title>BLOG</Title>

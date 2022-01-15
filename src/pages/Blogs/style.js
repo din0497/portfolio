@@ -36,22 +36,21 @@ export const CreateContainer = styled.div`
 export const Posting = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 `;
 
 export const Textarea = styled.textarea`
   color: rgba(51, 51, 51);
   line-height: 1.375;
   font-weight: 700;
-  font-size: 1.875rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-size: ${({size}) => size === 'S' ? '1rem': '1.875rem' };
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
   background-color: transparent;
   appearance: none;
   resize: none;
   width: 100%;
   margin-bottom: 1.25rem;
-  margin-top: 0.5rem;
   @media only screen and (max-width: 450px) {
    width: 90%;
   }
@@ -63,7 +62,7 @@ export const Textarea = styled.textarea`
 export const TextareaStory = styled.textarea`
   color: rgba(51, 51, 51);
   line-height: 1.375;
-  font-size: 1.875rem;
+  font-size: 1rem;
   padding-bottom: 3rem;
   resize: none;
   min-height: 100vh;
@@ -86,3 +85,10 @@ export const AddonsContainer = styled.div`
  flex-direction: row;
  gap:10px;
 `;
+
+let dateObj = new Date();
+let month = dateObj.getUTCMonth() + 1; //months from 1-12
+let day = dateObj.getUTCDate();
+let year = dateObj.getUTCFullYear();
+
+export let newdate = year + "/" + month + "/" + day;
