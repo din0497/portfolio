@@ -22,25 +22,6 @@ export let blogs = [
       "How to Dynamically Create Open Graph Images with Cloudinary and Next.js",
     date: "January 5, 2021",
   },
-  {
-    img: img,
-    title:
-      "How to Dynamically Create Open Graph Images with Cloudinary and Next.js",
-    date: "January 5, 2021",
-  },
-  {
-    img: img,
-    title:
-      "How to Dynamically Create Open Graph Images with Cloudinary and Next.js",
-    date: "January 5, 2021",
-  },
-  {
-    img: img,
-    title:
-      "How to Dynamically Create Open Graph Images with Cloudinary and Next.js",
-    date: "January 5, 2021",
-  },
-
 ];
 
 const Home = () => {

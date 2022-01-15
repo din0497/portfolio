@@ -1,23 +1,55 @@
 import { newdate, Posting } from "./style";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
 import { MdAddAPhoto, MdOutlineTitle } from "react-icons/md";
-import img from '../../assets/img.jpg';
 
-const CreatePost = ({setBlog}) => {
- const [title, setTitle] = useState();
- const [story, setStory] = useState();
+const CreatePost = ({ setBlog }) => {
+  const reader = new FileReader();
+  const inputRef = useRef();
+  const [title, setTitle] = useState();
+  const [story, setStory] = useState();
+  const [file, setFile] = useState();
+  const [img, setImg] = useState()
 
- const getTitle = (e) => setTitle(e.target.value);
- const getStory = (e) => setStory(e.target.value);
+  const getTitle = (e) => setTitle(e.target.value);
+  const getStory = (e) => setStory(e.target.value);
+  const getImage = (e) => setFile(e.target.files[0]);
 
- const clickHandler = () => {
-   setBlog(prev => [...prev, {title: title, story: story, img: img, date: newdate}])
- }
+  useEffect(() => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImg(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setImg(null);
+    }
+  },[file]);
+
+  const clickHandler = () => {
+    reader.onload = () => {
+    setImg(reader.result)
+    }
+    reader.readAsDataURL(file);
+    console.log(img);
+    setBlog( 
+      (prev) => [
+      ...prev,
+      { title: title, story: story, img: img , date: newdate },
+    ]);
+  };
   return (
     <Posting>
       <AddonsContainer>
-        <Addons>
+        <input
+          ref={inputRef}
+          hidden={true}
+          onChange={getImage}
+          accept="image/*"
+          type="file"
+        />
+        <Addons onClick={() => inputRef.current.click()}>
           <MdAddAPhoto />
           <h5>Add photo</h5>
         </Addons>
@@ -28,7 +60,7 @@ const CreatePost = ({setBlog}) => {
         <h5 onClick={clickHandler}>Publish</h5>
       </AddonsContainer>
       <Textarea onChange={getTitle} placeholder="Title…" />
-      {/* <Textarea size='S' placeholder="Enter subtitle(Optional)" /> */}
+      <Textarea size='S' placeholder="Enter subtitle(Optional)" />
       <TextareaStory onChange={getStory} placeholder="Tell your story…" />
     </Posting>
   );
