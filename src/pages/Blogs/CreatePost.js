@@ -1,11 +1,21 @@
 import { Posting } from "./style";
-import { AddonsContainer, Textarea } from "./style";
+import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
+import { MdAddAPhoto, MdOutlineTitle } from "react-icons/md";
 const CreatePost = () => {
   return (
     <Posting>
-      <AddonsContainer></AddonsContainer>
-      <Textarea maxlength="150" placeholder="Title…" />
-      <Textarea placeholder="Tell your story…"/>
+      <AddonsContainer>
+        <Addons>
+          <MdAddAPhoto />
+          <h5>Add photo</h5>
+        </Addons>
+        <Addons>
+          <MdOutlineTitle />
+          <h5>Add subtitle</h5>
+        </Addons>
+      </AddonsContainer>
+      <Textarea placeholder="Title…" />
+      <TextareaStory placeholder="Tell your story…" />
     </Posting>
   );
 };

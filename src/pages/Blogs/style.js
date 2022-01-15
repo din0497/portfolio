@@ -36,6 +36,7 @@ export const CreateContainer = styled.div`
 export const Posting = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const Textarea = styled.textarea`
@@ -51,10 +52,37 @@ export const Textarea = styled.textarea`
   width: 100%;
   margin-bottom: 1.25rem;
   margin-top: 0.5rem;
-  /* outline:none; */
-  /* border:none; */
+  @media only screen and (max-width: 450px) {
+   width: 90%;
+  }
+  outline:none;
+  border:none;
 }
 `;
-export const Addons = styled.div``;
 
-export const AddonsContainer = styled.div``;
+export const TextareaStory = styled.textarea`
+  color: rgba(51, 51, 51);
+  line-height: 1.375;
+  font-size: 1.875rem;
+  padding-bottom: 3rem;
+  resize: none;
+  min-height: 100vh;
+  width:100%;
+  outline:none;
+  border:none;
+`;
+
+export const Addons = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+color: grey;
+cursor: pointer;
+gap:5px;
+`;
+
+export const AddonsContainer = styled.div`
+ display:flex;
+ flex-direction: row;
+ gap:10px;
+`;
