@@ -10,8 +10,8 @@ const CreatePost = ({ setBlog }) => {
   const [title, setTitle] = useState();
   const [text, setText] = useState();
   const [file, setFile] = useState();
-  const [img, setImg] = useState()
-  const [arr, setArr] = useState()
+  const [img, setImg] = useState();
+  // const [arr, setArr] = useState();
 
   const getTitle = (e) => setTitle(e.target.value);
   const getText = (e) => setText(e.target.value);
@@ -27,21 +27,22 @@ const CreatePost = ({ setBlog }) => {
     } else {
       setImg(null);
     }
-  },[file]);
+  }, [file]);
 
   const clickHandler = () => {
     let paragraph = [];
-
-
+    let split = text.split("\n\n");
+    split.forEach(function (item) {
+      paragraph.push(item);
+    });
+    console.log(paragraph);
     reader.onload = () => {
-    setImg(reader.result)
-    }
+      setImg(reader.result);
+    };
     reader.readAsDataURL(file);
-    console.log(img);
-    setBlog( 
-      (prev) => [
+    setBlog((prev) => [
       ...prev,
-      { title: title, text: text, img: img , date: newdate },
+      { id: `${new Date().getTime()}`, title: title, img: img, text: paragraph, date: newdate },
     ]);
   };
   return (
@@ -62,10 +63,9 @@ const CreatePost = ({ setBlog }) => {
           <MdOutlineTitle />
           <h5>Add subtitle</h5>
         </Addons>
-        <h5 onClick={clickHandler}><Link to='/blog'>Publish</Link></h5>
+        <h5 onClick={clickHandler}>Publish</h5>
       </AddonsContainer>
       <Textarea onChange={getTitle} placeholder="Title…" />
-      {/* <Textarea size='S' placeholder="Enter subtitle(Optional)" /> */}
       <TextareaStory onChange={getText} placeholder="Tell your story…" />
     </Posting>
   );

@@ -11,10 +11,10 @@ const Blogs = ({blogs}) => {
       <CreateBlog/>
    { blogs.length !== 0 ? <BlogGrid>
         {blogs
-          .map((blog) => {
+          .map((blog,i) => {
             return (
               <Blog
-                key={blog.id}
+                key={i}
                 id={blog.id}
                 img={blog.img}
                 title={blog.title}
