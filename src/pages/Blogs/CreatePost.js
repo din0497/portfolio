@@ -8,12 +8,13 @@ const CreatePost = ({ setBlog }) => {
   const reader = new FileReader();
   const inputRef = useRef();
   const [title, setTitle] = useState();
-  const [story, setStory] = useState();
+  const [text, setText] = useState();
   const [file, setFile] = useState();
   const [img, setImg] = useState()
+  const [arr, setArr] = useState()
 
   const getTitle = (e) => setTitle(e.target.value);
-  const getStory = (e) => setStory(e.target.value);
+  const getText = (e) => {setText(e.target.value);
   const getImage = (e) => setFile(e.target.files[0]);
 
   useEffect(() => {
@@ -29,6 +30,9 @@ const CreatePost = ({ setBlog }) => {
   },[file]);
 
   const clickHandler = () => {
+    let paragraph = [];
+
+    
     reader.onload = () => {
     setImg(reader.result)
     }
@@ -37,7 +41,7 @@ const CreatePost = ({ setBlog }) => {
     setBlog( 
       (prev) => [
       ...prev,
-      { title: title, story: story, img: img , date: newdate },
+      { title: title, text: text, img: img , date: newdate },
     ]);
   };
   return (
@@ -61,8 +65,8 @@ const CreatePost = ({ setBlog }) => {
         <h5 onClick={clickHandler}><Link to='/blog'>Publish</Link></h5>
       </AddonsContainer>
       <Textarea onChange={getTitle} placeholder="Title…" />
-      <Textarea size='S' placeholder="Enter subtitle(Optional)" />
-      <TextareaStory onChange={getStory} placeholder="Tell your story…" />
+      {/* <Textarea size='S' placeholder="Enter subtitle(Optional)" /> */}
+      <TextareaStory onChange={getText} placeholder="Tell your story…" />
     </Posting>
   );
 };

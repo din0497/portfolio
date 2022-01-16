@@ -87,6 +87,21 @@ export const AddonsContainer = styled.div`
  gap:10px;
 `;
 
+export const  PostImg = styled.img`
+width:90%;
+height:auto;
+margin-left: -30px;
+@media only screen and (max-width: 1050px) {
+  margin-left: 0;
+`
+
+export const PostTitle = styled.h1`
+ padding: 27px;
+ @media only screen and (max-width: 500px) {
+ text-align:left;
+}
+`
+
 let dateObj = new Date();
 let month = dateObj.getUTCMonth() + 1; //months from 1-12
 let day = dateObj.getUTCDate();
