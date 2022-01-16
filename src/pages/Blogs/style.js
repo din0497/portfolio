@@ -22,7 +22,7 @@ export const BlogCart = styled.div`
 `;
 
 export const CreateContainer = styled.div`
-  width: 90%;
+  width: 80%;
   color: rgba(51, 51, 51);
   background-color: rgba(245, 247, 250);
   border: rgba(229, 231, 235) solid 1px;
@@ -31,6 +31,7 @@ export const CreateContainer = styled.div`
   align-items: center;
   border-radius: 15px;
   cursor: pointer;
+  padding: 0 30px;
 `;
 
 export const Posting = styled.div`

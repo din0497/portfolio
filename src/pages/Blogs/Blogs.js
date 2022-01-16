@@ -9,7 +9,7 @@ const Blogs = ({blogs}) => {
     <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
       <Title>BLOG</Title>
       <CreateBlog/>
-      <BlogGrid>
+   { blogs.length !== 0 ? <BlogGrid>
         {blogs
           .map((blog, i) => {
             return (
@@ -22,8 +22,7 @@ const Blogs = ({blogs}) => {
             );
           })
           .reverse()}
-      </BlogGrid>
-      {/* <CreatePost/> */}
+      </BlogGrid> : <p>no data yet</p> }
     </div>
   );
 };

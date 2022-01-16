@@ -2,6 +2,7 @@ import { newdate, Posting } from "./style";
 import { useState, useRef, useEffect } from "react";
 import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
 import { MdAddAPhoto, MdOutlineTitle } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const CreatePost = ({ setBlog }) => {
   const reader = new FileReader();
@@ -57,7 +58,7 @@ const CreatePost = ({ setBlog }) => {
           <MdOutlineTitle />
           <h5>Add subtitle</h5>
         </Addons>
-        <h5 onClick={clickHandler}>Publish</h5>
+        <h5 onClick={clickHandler}><Link to='/blog'>Publish</Link></h5>
       </AddonsContainer>
       <Textarea onChange={getTitle} placeholder="Title…" />
       <Textarea size='S' placeholder="Enter subtitle(Optional)" />

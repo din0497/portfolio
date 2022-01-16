@@ -19,7 +19,6 @@ const CreateBlog = () => {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            gap: "15px",
             color: "gray",
           }}
         >
@@ -33,7 +32,7 @@ const CreateBlog = () => {
           >
             <BsPencil size={20} />
           </div>
-          <h3>Create a blog</h3>
+          <h3 style={{width: '180px'}}>Create a blog</h3>
         </div>
       </CreateContainer>
     </Link>
