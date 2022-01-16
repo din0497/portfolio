@@ -14,7 +14,7 @@ const CreatePost = ({ setBlog }) => {
   const [arr, setArr] = useState()
 
   const getTitle = (e) => setTitle(e.target.value);
-  const getText = (e) => {setText(e.target.value);
+  const getText = (e) => setText(e.target.value);
   const getImage = (e) => setFile(e.target.files[0]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const CreatePost = ({ setBlog }) => {
   const clickHandler = () => {
     let paragraph = [];
 
-    
+
     reader.onload = () => {
     setImg(reader.result)
     }
