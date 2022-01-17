@@ -15,6 +15,18 @@ export const BlogGrid = styled.div`
   }
 `;
 
+export const SkeltonGrid = styled.div`
+display: grid;
+grid-template-columns: 30% 30% 30%;
+
+@media only screen and (max-width: 800px) {
+    grid-template-columns: 45% 45%;
+  }
+  @media only screen and (max-width: 436px) {
+    grid-template-columns: 90%;
+  }
+`
+
 export const BlogCart = styled.div`
   display: flex;
   flex-direction: column;

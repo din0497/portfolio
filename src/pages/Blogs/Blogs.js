@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { Title } from "../../commons/Title";
-import { BlogGrid } from "./style";
+import { BlogGrid, SkeltonGrid } from "./style";
 import Blog from "./Blog";
 import CreateBlog from "./CreateBlog";
 import useHttp from "../../hooks/use-http";
 import { getAllBlogs } from "../../lib/api";
+import { BlogItem } from "../../commons/BlogSkelton";
 
 const Blogs = () => {
   const {
@@ -16,10 +17,7 @@ const Blogs = () => {
   useEffect(() => {
     sendRequest();
   }, [sendRequest]);
-  // console.log(blogs)
-  if (status === "pending") {
-    return <p>loading...</p>;
-  }
+
 
   if (error) {
     return <p>{error}</p>;
@@ -35,7 +33,19 @@ const Blogs = () => {
     >
       <Title>BLOG</Title>
       <CreateBlog />
-      <BlogGrid>
+  { status === 'pending'?    
+          (
+            <SkeltonGrid>
+              <BlogItem />
+              <BlogItem />
+              <BlogItem />
+              <BlogItem />
+              <BlogItem />
+              <BlogItem />
+            </SkeltonGrid>
+          )
+          
+          : <BlogGrid>
         {blogs.map((blog, i) => {
           return (
             <Blog
@@ -47,7 +57,7 @@ const Blogs = () => {
             />
           );
         })}
-      </BlogGrid>
+      </BlogGrid> }
     </div>
   );
 };

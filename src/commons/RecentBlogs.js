@@ -1,15 +1,9 @@
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import {
-  MiniContainer,
-  BlogCartContainer,
-  Button,
-  RecentBlogsContainer,
-  H2,
-} from "./style";
+import { BlogCartContainer } from "./style";
 import Blog from "./Blog";
 import useHttp from "../hooks/use-http";
 import { getAllBlogs } from "../lib/api";
+import { BlogItem } from "./BlogSkelton";
 
 export const RecentBlogs = () => {
   const {
@@ -23,7 +17,13 @@ export const RecentBlogs = () => {
   }, [sendRequest]);
 
   if (status === "pending") {
-    return <p>loading...</p>;
+    return (
+      <BlogCartContainer>
+        <BlogItem />
+        <BlogItem />
+        <BlogItem />
+      </BlogCartContainer>
+    );
   }
 
   if (error) {
@@ -37,19 +37,17 @@ export const RecentBlogs = () => {
   return (
     <>
       <BlogCartContainer>
-        {blogs
-          .slice(0, 3)
-          .map((blog, i) => {
-            return (
-              <Blog
-                key={i}
-                id={blog.id}
-                img={blog.img}
-                title={blog.title}
-                date={blog.date}
-              />
-            );
-          })}
+        {blogs.slice(0, 3).map((blog, i) => {
+          return (
+            <Blog
+              key={i}
+              id={blog.id}
+              img={blog.img}
+              title={blog.title}
+              date={blog.date}
+            />
+          );
+        })}
       </BlogCartContainer>
     </>
   );
