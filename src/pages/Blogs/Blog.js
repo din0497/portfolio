@@ -2,7 +2,6 @@ import { Img, Title } from "../../commons/style";
 import { BlogCart } from "./style";
 import { Link } from "react-router-dom";
 const Blog = ({ img, title, date, id }) => {
-  console.log();
   return (
     <div>
       <BlogCart>

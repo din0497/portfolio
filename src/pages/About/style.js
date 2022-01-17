@@ -32,12 +32,12 @@ export const MeSection = styled.section`
   max-width: 65rem;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 1080px) {
+    padding-left: 37px;
+  }
   @media only screen and (max-width: 800px) {
     flex-direction: column;
     padding-left: 0;
-  }
-  @media only screen and (max-width: 1080px) {
-    padding-left: 37px;
   }
 `;
 
