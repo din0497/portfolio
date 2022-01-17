@@ -2,16 +2,20 @@ import { newdate, Posting } from "./style";
 import { useState, useRef, useEffect } from "react";
 import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
 import { MdAddAPhoto, MdOutlineTitle } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import useHttp from "../../hooks/use-http";
+import { addBlog } from "../../lib/api";
 
-const CreatePost = ({ setBlog }) => {
+const CreatePost = () => {
+  const { sendRequest, status } = useHttp(addBlog);
+  const history = useNavigate();
   const reader = new FileReader();
   const inputRef = useRef();
+  const [blogs, setBlog] = useState();
   const [title, setTitle] = useState();
   const [text, setText] = useState();
   const [file, setFile] = useState();
   const [img, setImg] = useState();
-  // const [arr, setArr] = useState();
 
   const getTitle = (e) => setTitle(e.target.value);
   const getText = (e) => setText(e.target.value);
@@ -29,21 +33,29 @@ const CreatePost = ({ setBlog }) => {
     }
   }, [file]);
 
+  useEffect(() => {
+    if (status === "completed") {
+      history("/blog");
+    }
+  }, [status, history]);
+
   const clickHandler = () => {
     let paragraph = [];
     let split = text.split("\n\n");
     split.forEach(function (item) {
       paragraph.push(item);
     });
-    console.log(paragraph);
     reader.onload = () => {
       setImg(reader.result);
     };
     reader.readAsDataURL(file);
-    setBlog((prev) => [
-      ...prev,
-      { id: `${new Date().getTime()}`, title: title, img: img, text: paragraph, date: newdate },
-    ]);
+    sendRequest({
+      id: `${new Date().getTime()}`,
+      title: title,
+      img: img,
+      text: paragraph,
+      date: newdate,
+    });
   };
   return (
     <Posting>
