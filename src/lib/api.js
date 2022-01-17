@@ -17,6 +17,7 @@ export async function getAllBlogs() {
 
     transformedBlogs.push(blogObj);
   }
+  console.log(data, transformedBlogs)
   return transformedBlogs;
 }
 

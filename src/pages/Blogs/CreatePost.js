@@ -50,7 +50,6 @@ const CreatePost = () => {
     };
     reader.readAsDataURL(file);
     sendRequest({
-      id: `${new Date().getTime()}`,
       title: title,
       img: img,
       text: paragraph,

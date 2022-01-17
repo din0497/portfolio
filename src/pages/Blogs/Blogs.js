@@ -6,47 +6,50 @@ import CreateBlog from "./CreateBlog";
 import useHttp from "../../hooks/use-http";
 import { getAllBlogs } from "../../lib/api";
 
-const Blogs = ({setBlogs}) => {
-  const { sendRequest, status, data: blogs, error } = useHttp(getAllBlogs, true);
+const Blogs = () => {
+  const {
+    sendRequest,
+    status,
+    data: blogs,
+    error,
+  } = useHttp(getAllBlogs, true);
   useEffect(() => {
     sendRequest();
-    setBlogs(blogs)
   }, [sendRequest]);
-
+// console.log(blogs)
   if (status === "pending") {
-    return <p>loading...</p>  
+    return <p>loading...</p>;
   }
 
-  if(error){
-   return <p>{error}</p>
+  if (error) {
+    return <p>{error}</p>;
   }
 
-  if(status === 'completed' && (!blogs || blogs.length === 0)){
-  return  <p>no blogs found</p>
+  if (status === "completed" && (!blogs || blogs.length === 0)) {
+    return <p>no blogs found</p>;
   }
 
-  
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <Title>BLOG</Title>
       <CreateBlog />
-        <BlogGrid>
-          {blogs
-            .map((blog, i) => {
-              return (
-                <Blog
-                  key={i}
-                  id={blog.id}
-                  img={blog.img}
-                  title={blog.title}
-                  date={blog.date}
-                />
-              );
-            })
-            .reverse()}
-        </BlogGrid>
+      <BlogGrid>
+        {blogs
+          .map((blog, i) => {
+            return (
+              <Blog
+                key={i}
+                id={blog.id}
+                img={blog.img}
+                title={blog.title}
+                date={blog.date}
+              />
+            );
+          })
+          .reverse()}
+      </BlogGrid>
     </div>
   );
 };

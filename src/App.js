@@ -14,8 +14,7 @@ import Post from "./pages/Blogs/Post";
 
 function App() {
   const [drop, setDrop] = useState("hidden");
-  const [blogs, setBlog] = useState();
-  console.log(blogs);
+
   return (
     <main className="header">
       <Navbar drop={drop} setDrop={setDrop} />
@@ -26,12 +25,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blogs setBlogs={setBlog} />} />
+          <Route path="/blog" element={<Blogs/>} />
           <Route
             path="blog/create"
             element={<CreatePost />}
           />
-          <Route path="blog/:id" element={<Post blogs={blogs} />} />
+          <Route path="blog/:id" element={<Post/>} />
         </Routes>
       </div>
       <Footer />
