@@ -6,10 +6,10 @@ const Blog = ({ img, title, date, id }) => {
     <BlogCart>
       <Img src={img} loading="lazy" />
       <div>
-        <Title>{title}</Title>
+        <Title><Link style={{textDecoration:'none', color:'black'}} to={`/blog/${id}`}>{title}</Link></Title>
         <span style={{ marginLeft: "5px", color: "grey" }}>{date}</span>
       </div>
-      <Link to={`/blog/${id}`}>read more</Link>
+      
     </BlogCart>
   );
 };

@@ -2,7 +2,8 @@ import ShortIntro from "../../components/Home/ShortIntro";
 import img1 from "../../assets/img1.jpg";
 import img from "../../assets/img.jpg";
 import { RecentBlogs } from "../../commons/RecentBlogs";
-import { H2, MiniContainer, RecentBlogsContainer } from "../../commons/style";
+import { Button, H2, MiniContainer, RecentBlogsContainer } from "../../commons/style";
+import { Link } from "react-router-dom";
 
 export let blogs = [
   {
@@ -37,6 +38,11 @@ const Home = () => {
           </p>
         </MiniContainer>
         <RecentBlogs />
+        <div style={{ margin:'auto', paddingTop:'4rem', maxWidth: "300px" }}>
+        <Link to="/blog">
+          <Button type="true">See All articles</Button>
+        </Link>
+      </div>
       </RecentBlogsContainer>
     </>
   );

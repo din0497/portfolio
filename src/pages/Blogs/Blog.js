@@ -13,10 +13,9 @@ const Blog = ({ img, title, date, id }) => {
             flexDirection: "column",
           }}
         >
-          <Title>{title}</Title>
+          <Title><Link style={{textDecoration:'none',color:'black'}} to={`/blog/${id}`}>{title}</Link></Title>
           <span style={{ marginLeft: "5px", color: "grey" }}>{date}</span>
         </div>
-        <Link to={`/blog/${id}`}>read more</Link>
       </BlogCart>
     </div>
   );

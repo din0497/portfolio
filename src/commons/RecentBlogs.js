@@ -51,11 +51,6 @@ export const RecentBlogs = () => {
             );
           })}
       </BlogCartContainer>
-      <div style={{ padding: "4em 0 0 1em", maxWidth: "300px" }}>
-        <Link to="/blog">
-          <Button type="true">See All articles</Button>
-        </Link>
-      </div>
     </>
   );
 };
