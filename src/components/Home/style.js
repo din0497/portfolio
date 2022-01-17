@@ -17,7 +17,11 @@ export const Wrapper = styled.div`
     flex-direction: column-reverse;
   }
 `;
-export const TextWrapper = styled.div``;
+export const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const ButtonWrapper = styled.div`
   display: flex;

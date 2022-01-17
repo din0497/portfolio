@@ -18,7 +18,7 @@ export async function getAllBlogs() {
     transformedBlogs.push(blogObj);
   }
   console.log(data, transformedBlogs)
-  return transformedBlogs;
+  return transformedBlogs.reverse();
 }
 
 export async function getSingleBlog(blogId) {

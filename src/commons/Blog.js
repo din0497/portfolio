@@ -15,6 +15,3 @@ const Blog = ({ img, title, date, id }) => {
 };
 
 export default Blog;
-// GiHamburger
-// FaHamburger
-// GiHamburgerMenu

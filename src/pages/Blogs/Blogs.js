@@ -16,7 +16,7 @@ const Blogs = () => {
   useEffect(() => {
     sendRequest();
   }, [sendRequest]);
-// console.log(blogs)
+  // console.log(blogs)
   if (status === "pending") {
     return <p>loading...</p>;
   }
@@ -36,19 +36,17 @@ const Blogs = () => {
       <Title>BLOG</Title>
       <CreateBlog />
       <BlogGrid>
-        {blogs
-          .map((blog, i) => {
-            return (
-              <Blog
-                key={i}
-                id={blog.id}
-                img={blog.img}
-                title={blog.title}
-                date={blog.date}
-              />
-            );
-          })
-          .reverse()}
+        {blogs.map((blog, i) => {
+          return (
+            <Blog
+              key={i}
+              id={blog.id}
+              img={blog.img}
+              title={blog.title}
+              date={blog.date}
+            />
+          );
+        })}
       </BlogGrid>
     </div>
   );
