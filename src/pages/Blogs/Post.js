@@ -17,9 +17,13 @@ const Post = () => {
     sendRequest(id);
   }, [sendRequest, id]);
 
-  // if (status === "pending") {
-  //   return <p>loading...</p>;
-  // }
+  if (status === "pending") {
+    return (
+      <div style={{ padding: "100px 0 205px  0" }}>
+        <BeatLoader color="rgb(20 184 166)" />
+      </div>
+    );
+  }
 
   if (error) {
     return <p>{error}</p>;
@@ -31,7 +35,7 @@ const Post = () => {
 
   return (
     <AboutContainer>
-      {/* <PostTitle>{blog.title}</PostTitle>
+      <PostTitle>{blog.title}</PostTitle>
       <span
         style={{
           marginTop: "-40px",
@@ -47,10 +51,7 @@ const Post = () => {
         {blog.text.map((p, i) => {
           return <Paragraph key={i}>{p}</Paragraph>;
         })}
-      </Article> */}
-      <div style={{ padding: "100px 0 205px  0" }}>
-        <BeatLoader color="rgb(20 184 166)" />
-      </div>
+      </Article>
     </AboutContainer>
   );
 };
