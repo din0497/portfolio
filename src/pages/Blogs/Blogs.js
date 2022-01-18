@@ -18,46 +18,40 @@ const Blogs = () => {
     sendRequest();
   }, [sendRequest]);
 
-
-  if (error) {
-    return <p>{error}</p>;
-  }
-
-  if (status === "completed" && (!blogs || blogs.length === 0)) {
-    return <p>no blogs found</p>;
-  }
-
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <Title>BLOG</Title>
       <CreateBlog />
-  { status === 'pending'?    
-          (
-            <SkeltonGrid>
-              <BlogItem />
-              <BlogItem />
-              <BlogItem />
-              <BlogItem />
-              <BlogItem />
-              <BlogItem />
-            </SkeltonGrid>
-          )
-          
-          : <BlogGrid>
-        {blogs.map((blog, i) => {
-          return (
-            <Blog
-              key={i}
-              id={blog.id}
-              img={blog.img}
-              title={blog.title}
-              date={blog.date}
-            />
-          );
-        })}
-      </BlogGrid> }
+      {status === "pending" ? (
+        <SkeltonGrid>
+          <BlogItem />
+          <BlogItem />
+          <BlogItem />
+          <BlogItem />
+          <BlogItem />
+          <BlogItem />
+        </SkeltonGrid>
+      ) : status === "completed" && (!blogs || blogs.length === 0) ? (
+        <p style={{paddingBottom: '131px'}}>no blogs found</p>
+      ) : error ? (
+        <p style={{paddingBottom: '131px'}}>{error}</p>
+      ) : (
+        <BlogGrid>
+          {blogs.map((blog, i) => {
+            return (
+              <Blog
+                key={i}
+                id={blog.id}
+                img={blog.img}
+                title={blog.title}
+                date={blog.date}
+              />
+            );
+          })}
+        </BlogGrid>
+      )}
     </div>
   );
 };
