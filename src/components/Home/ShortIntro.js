@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import img from "../../assets/brand.png";
 import cv from "../../assets/CV_Rivojiddin Abdunazarov.pdf";
+import "../../App.css";
 import {
   Button,
   ButtonWrapper,
@@ -23,10 +24,12 @@ const ShortIntro = () => {
           </IntroH1>
           <ButtonWrapper>
             <Link to="/about">
-              <Button type="true">More About me</Button>
+              <Button className="button" type="true">
+                More About me
+              </Button>
             </Link>
-            <Link to='#'>
-              <Button>
+            <Link to="#">
+              <Button className="button">
                 <a
                   href={cv}
                   download

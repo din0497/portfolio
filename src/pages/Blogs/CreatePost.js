@@ -1,4 +1,4 @@
-import { newdate, Posting } from "./style";
+import { fullDate, Posting } from "./style";
 import { useState, useRef, useEffect } from "react";
 import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
 import { MdAddAPhoto, MdOutlineTitle } from "react-icons/md";
@@ -53,7 +53,7 @@ const CreatePost = () => {
       title: title,
       img: img,
       text: paragraph,
-      date: newdate,
+      date: fullDate,
     });
   };
   return (

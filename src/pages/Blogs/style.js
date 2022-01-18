@@ -16,19 +16,19 @@ export const BlogGrid = styled.div`
 `;
 
 export const SkeltonGrid = styled.div`
-display: grid;
-grid-template-columns: 30% 30% 30%;
-justify-content: center;
-align-items: center;
-margin-left: 30px;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
 
-@media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     grid-template-columns: 45% 45%;
   }
   @media only screen and (max-width: 436px) {
     grid-template-columns: 90%;
   }
-`
+`;
 
 export const BlogCart = styled.div`
   display: flex;
@@ -47,6 +47,8 @@ export const CreateContainer = styled.div`
   border-radius: 15px;
   cursor: pointer;
   padding: 0 30px;
+
+
 `;
 
 export const Posting = styled.div`
@@ -59,7 +61,7 @@ export const Textarea = styled.textarea`
   color: rgba(51, 51, 51);
   line-height: 1.375;
   font-weight: 700;
-  font-size: ${({size}) => size === 'S' ? '1rem': '1.875rem' };
+  font-size: ${({ size }) => (size === "S" ? "1rem" : "1.875rem")};
   /* padding-left: 1rem;
   padding-right: 1rem; */
   background-color: transparent;
@@ -82,44 +84,57 @@ export const TextareaStory = styled.textarea`
   padding-bottom: 3rem;
   resize: none;
   min-height: 100vh;
-  width:100%;
-  outline:none;
-  border:none;
+  width: 100%;
+  outline: none;
+  border: none;
 `;
 
 export const Addons = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
-color: grey;
-cursor: pointer;
-gap:5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: grey;
+  cursor: pointer;
+  gap: 5px;
 `;
 
 export const AddonsContainer = styled.div`
- display:flex;
- flex-direction: row;
- gap:10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 `;
 
-export const  PostImg = styled.img`
+export const PostImg = styled.img`
 width:90%;
 height:auto;
 margin-left: -30px;
 @media only screen and (max-width: 1050px) {
   margin-left: 0;
-`
+`;
 
 export const PostTitle = styled.h1`
- padding: 27px;
- @media only screen and (max-width: 500px) {
- text-align:left;
-}
-`
+  padding: 27px;
+  @media only screen and (max-width: 500px) {
+    text-align: left;
+  }
+`;
+const month = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
-let dateObj = new Date();
-let month = dateObj.getUTCMonth() + 1; //months from 1-12
-let day = dateObj.getUTCDate();
-let year = dateObj.getUTCFullYear();
+ let date = new Date().getDate()
+ let mon = month[new Date().getMonth()]
+ let year = new Date ().getFullYear()
 
-export let newdate = year + "/" + month + "/" + day;
+ export let fullDate = `${mon} ${date}, ${year}`

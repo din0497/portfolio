@@ -31,7 +31,7 @@ export const RecentBlogs = () => {
   }
 
   if (status === "completed" && (!blogs || blogs.length === 0)) {
-    return <p>no blogs found</p>;
+    return <p style={{textAlign: 'center'}}>no recent blogs found</p>;
   }
 
   return (
