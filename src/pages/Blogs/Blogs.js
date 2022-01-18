@@ -24,7 +24,7 @@ const Blogs = () => {
     >
       <Title>BLOG</Title>
       <CreateBlog />
-      {git ? (
+      {status === "pending" ? (
         <SkeltonGrid>
           <BlogSk />
           <BlogSk />
