@@ -5,7 +5,7 @@ import Blog from "./Blog";
 import CreateBlog from "./CreateBlog";
 import useHttp from "../../hooks/use-http";
 import { getAllBlogs } from "../../lib/api";
-import { BlogItem } from "../../commons/BlogSkelton";
+import { BlogSk } from "../../commons/BlogSkelton";
 
 const Blogs = () => {
   const {
@@ -26,12 +26,12 @@ const Blogs = () => {
       <CreateBlog />
       {status === "pending" ? (
         <SkeltonGrid>
-          <BlogItem />
-          <BlogItem />
-          <BlogItem />
-          <BlogItem />
-          <BlogItem />
-          <BlogItem />
+          <BlogSk />
+          <BlogSk />
+          <BlogSk />
+          <BlogSk />
+          <BlogSk />
+          <BlogSk />
         </SkeltonGrid>
       ) : status === "completed" && (!blogs || blogs.length === 0) ? (
         <p style={{paddingBottom: '131px'}}>no blogs found</p>

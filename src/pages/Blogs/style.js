@@ -18,6 +18,9 @@ export const BlogGrid = styled.div`
 export const SkeltonGrid = styled.div`
 display: grid;
 grid-template-columns: 30% 30% 30%;
+justify-content: center;
+align-items: center;
+margin-left: 30px;
 
 @media only screen and (max-width: 800px) {
     grid-template-columns: 45% 45%;

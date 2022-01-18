@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .main {
@@ -13,7 +13,7 @@
   margin-bottom: 50px;
 }
 
-.icon{
+.icon {
   cursor: pointer;
 }
 @media only screen and (min-width: 770px) {
@@ -23,7 +23,19 @@
   }
 }
 
-.active{
-border-bottom:rgb(20 184 166) solid 2px ;
-color: black!important;
+.active {
+  border-bottom: rgb(20 184 166) solid 2px;
+  color: black !important;
+}
+
+.skelton {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+  .skelton {
+    width: 77%;
+  }
 }
