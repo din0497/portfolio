@@ -27,7 +27,7 @@ export const RecentBlogs = () => {
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <p style={{textAlign: 'center'}}>{error}</p>;
   }
 
   if (status === "completed" && (!blogs || blogs.length === 0)) {

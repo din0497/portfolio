@@ -1,4 +1,5 @@
 import { Title } from "../../commons/Title";
+import {Link} from 'react-router-dom'
 import {
   AboutContainer,
   Article,
@@ -8,6 +9,7 @@ import {
 import me from "../../assets/me.jpg";
 import { Me } from "./style";
 import RecentBlogs from "../../commons/RecentBlogs";
+import { RecentBlogsContainer, MiniContainer,H2, Button } from "../../commons/style";
 
 
 const About = () => {
@@ -50,7 +52,20 @@ const About = () => {
           </Paragraph>
         </Article>
       </MeSection>
-      <RecentBlogs />
+      <RecentBlogsContainer>
+        <MiniContainer>
+          <H2>I love to share my knowledge by writing.</H2>
+          <p style={{ color: "grey", maxWidth: "353px", textAlign: "left" }}>
+            Check out a few of my most recent publishings.
+          </p>
+        </MiniContainer>
+        <RecentBlogs />
+        <div style={{ margin:'auto', paddingTop:'4rem', maxWidth: "300px" }}>
+        <Link to="/blog">
+          <Button type="true">See All articles</Button>
+        </Link>
+      </div>
+      </RecentBlogsContainer>
     </AboutContainer>
   );
 };
