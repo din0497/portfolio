@@ -10,6 +10,7 @@ import me from "../../assets/me.jpg";
 import { Me } from "./style";
 import RecentBlogs from "../../commons/RecentBlogs";
 import { RecentBlogsContainer, MiniContainer,H2, Button } from "../../commons/style";
+import '../../App.css'
 
 
 const About = () => {
@@ -62,7 +63,7 @@ const About = () => {
         <RecentBlogs />
         <div style={{ margin:'auto', paddingTop:'4rem', maxWidth: "300px" }}>
         <Link to="/blog">
-          <Button type="true">See All articles</Button>
+          <Button className="button" type="true">See All articles</Button>
         </Link>
       </div>
       </RecentBlogsContainer>
