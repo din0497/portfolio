@@ -10,15 +10,15 @@ export const BlogCart = styled.div`
 `;
 
 export const Img = styled.img`
-  max-width: 100%;
-  min-width: 100%;
-  height: 50vh;
-  max-height: 300px;
+  max-width: 60%;
+  min-width: 70%;
+  height: auto;
+  max-height: 250px;
   border-radius: 13px;
 `;
 
 export const Title = styled.h3`
- text-align:left;
+  text-align: left;
 `;
 
 export const RecentBlogsContainer = styled.div`
@@ -35,7 +35,6 @@ export const MiniContainer = styled.div`
   flex-direction: column;
   max-width: 500px;
   margin-left: 38px;
- 
 `;
 
 export const BlogCartContainer = styled.div`
@@ -73,5 +72,6 @@ export const H2 = styled.h2`
   max-width: 472px;
   text-align: left;
   @media only screen and (max-width: 500px) {
-    width: 300px }
+    width: 300px;
+  }
 `;
