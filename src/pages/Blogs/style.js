@@ -117,7 +117,7 @@ export const PostTitle = styled.h1`
   }
 `;
 
-export const Demo = styled.div`
+export const Demo = styled.img`
   max-width: 60%;
   min-width: 70%;
   height: auto;
