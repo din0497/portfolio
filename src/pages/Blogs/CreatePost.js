@@ -1,4 +1,4 @@
-import { fullDate, Posting } from "./style";
+import { Demo, fullDate, Posting } from "./style";
 import { useState, useRef, useEffect } from "react";
 import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
 import { MdAddAPhoto} from "react-icons/md";
@@ -7,7 +7,6 @@ import useHttp from "../../hooks/use-http";
 import { addBlog } from "../../lib/api";
 import "../../App.css";
 import ClockLoader from "react-spinners/ClockLoader";
-import { Img } from "../../commons/style";
 
 const CreatePost = () => {
   const { sendRequest, status } = useHttp(addBlog);
@@ -73,11 +72,11 @@ const CreatePost = () => {
           <h5>Add photo</h5>
         </Addons>
         <Addons>
-        <h5 className="publish" onClick={clickHandler}> Publish </h5>
+        <h5 className="publish" onClick={clickHandler}> {status === 'pending'? 'Publishing...' : 'Publish'} </h5>
           {status === 'pending' && <ClockLoader color='rgb(20 184 166)' size={15} />}
         </Addons>
       </AddonsContainer>
-      <Img src={img}/>
+      <Demo src={img}/>
       <Textarea onChange={getTitle} placeholder="Title…" />
       <TextareaStory onChange={getText} placeholder="Tell your story…" />
     </Posting>

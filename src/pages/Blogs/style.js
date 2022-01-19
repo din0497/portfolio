@@ -47,8 +47,6 @@ export const CreateContainer = styled.div`
   border-radius: 15px;
   cursor: pointer;
   padding: 0 30px;
-
-
 `;
 
 export const Posting = styled.div`
@@ -118,6 +116,15 @@ export const PostTitle = styled.h1`
     text-align: left;
   }
 `;
+
+export const Demo = styled.div`
+  max-width: 60%;
+  min-width: 70%;
+  height: auto;
+  max-height: 250px;
+  border-radius: 13px;
+`;
+
 const month = [
   "January",
   "February",
@@ -133,8 +140,8 @@ const month = [
   "December",
 ];
 
- let date = new Date().getDate()
- let mon = month[new Date().getMonth()]
- let year = new Date ().getFullYear()
+let date = new Date().getDate();
+let mon = month[new Date().getMonth()];
+let year = new Date().getFullYear();
 
- export let fullDate = `${mon} ${date}, ${year}`
+export let fullDate = `${mon} ${date}, ${year}`;
