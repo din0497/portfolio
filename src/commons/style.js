@@ -41,7 +41,7 @@ export const MiniContainer = styled.div`
 export const BlogCartContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   max-width: 100%;
   min-width: 100%;

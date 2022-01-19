@@ -1,17 +1,18 @@
 import { fullDate, Posting } from "./style";
 import { useState, useRef, useEffect } from "react";
 import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
-import { MdAddAPhoto, MdOutlineTitle } from "react-icons/md";
+import { MdAddAPhoto} from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import useHttp from "../../hooks/use-http";
 import { addBlog } from "../../lib/api";
+import "../../App.css";
+import ClockLoader from "react-spinners/ClockLoader";
 
 const CreatePost = () => {
   const { sendRequest, status } = useHttp(addBlog);
   const history = useNavigate();
   const reader = new FileReader();
   const inputRef = useRef();
-  const [blogs, setBlog] = useState();
   const [title, setTitle] = useState();
   const [text, setText] = useState();
   const [file, setFile] = useState();
@@ -20,6 +21,7 @@ const CreatePost = () => {
   const getTitle = (e) => setTitle(e.target.value);
   const getText = (e) => setText(e.target.value);
   const getImage = (e) => setFile(e.target.files[0]);
+  const [isSpin, setSpin] = useState(false)
 
   useEffect(() => {
     if (file) {
@@ -71,10 +73,9 @@ const CreatePost = () => {
           <h5>Add photo</h5>
         </Addons>
         <Addons>
-          <MdOutlineTitle />
-          <h5>Add subtitle</h5>
+        <h5 className="publish" onClick={clickHandler}> Publish </h5>
+          {status === 'pending' && <ClockLoader color='rgb(20 184 166)' size={15} />}
         </Addons>
-        <h5 onClick={clickHandler}>Publish</h5>
       </AddonsContainer>
       <Textarea onChange={getTitle} placeholder="Title…" />
       <TextareaStory onChange={getText} placeholder="Tell your story…" />
