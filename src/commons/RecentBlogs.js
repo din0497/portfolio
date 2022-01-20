@@ -45,6 +45,7 @@ export const RecentBlogs = () => {
               img={blog.img}
               title={blog.title}
               date={blog.date}
+              type= {blog.type}
             />
           );
         })}

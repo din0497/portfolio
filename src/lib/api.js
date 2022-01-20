@@ -17,9 +17,9 @@ export async function getAllBlogs() {
 
     transformedBlogs.push(blogObj);
   }
-  console.log(data, transformedBlogs)
   return transformedBlogs.reverse();
 }
+
 
 export async function getSingleBlog(blogId) {
   const response = await fetch(`${FIREBASE_DOMAIN}/blogs/${blogId}.json`);
@@ -53,43 +53,39 @@ export async function addBlog(blogData) {
 
   return null;
 }
+export async function addTag(tag) {
+  const response = await fetch(`${FIREBASE_DOMAIN}/tags.json`, {
+    method: 'POST',
+    body: JSON.stringify(tag),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const data = await response.json();
 
-// export async function addComment(commentData, quoteId) {
-//   const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`, {
-//     method: 'POST',
-//     body: JSON.stringify(commentData),
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   });
-//   const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || 'Could not create quote.');
+  }
 
-//   if (!response.ok) {
-//     throw new Error(data.message || 'Could not add comment.');
-//   }
+  return null;
+}
 
-//   return { commentId: data.name };
-// }
+export async function getTags() {
+  const response = await fetch(`${FIREBASE_DOMAIN}/tags.json`);
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || 'Could not fetch blogs.');
+  }
 
-// export async function getAllComments(quoteId) {
-//   const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`);
+  const transformedTags = [];
 
-//   const data = await response.json();
+  for (const key in data) {
+    const blogObj = {
+      id: key,
+      ...data[key],
+    };
 
-//   if (!response.ok) {
-//     throw new Error(data.message || 'Could not get comments.');
-//   }
-
-//   const transformedComments = [];
-
-//   for (const key in data) {
-//     const commentObj = {
-//       id: key,
-//       ...data[key],
-//     };
-
-//     transformedComments.push(commentObj);
-//   }
-
-//   return transformedComments;
-// }
+    transformedTags.push(blogObj);
+  }
+  return transformedTags.reverse();
+}

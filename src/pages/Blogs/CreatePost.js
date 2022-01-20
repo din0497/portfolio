@@ -15,13 +15,13 @@ const CreatePost = () => {
   const { sendRequest, status } = useHttp(addBlog);
   const history = useNavigate();
   const inputRef = useRef();
-  const [title, setTitle] = useState('');
-  const [text, setText] = useState('');
+  const [title, setTitle] = useState("");
+  const [text, setText] = useState("");
   const [img, setImg] = useState();
   const [prog, setProg] = useState(0);
   const [name, getName] = useState(0);
   const [link, setLink] = useState(null);
-  const [type, setType] = useState('refular')
+  const [type, setType] = useState("regular");
 
   const getTitle = (e) => setTitle(e.target.value);
   const getText = (e) => setText(e.target.value);
@@ -29,6 +29,7 @@ const CreatePost = () => {
     setImg(e.target.files[0]);
     getName(e.target.files[0].name);
   };
+  const getTagHandler = (e) => setType(e.target.value);
 
   useEffect(() => {
     if (img) {
@@ -58,7 +59,7 @@ const CreatePost = () => {
   }, [status, history]);
 
   const clickHandler = () => {
-    if (link === null && title === '' && text === '') {
+    if (link === null && title === "" && text === "") {
       alert("Please upload file or wait until uploading complete!");
       return;
     }
@@ -98,7 +99,11 @@ const CreatePost = () => {
           </h5>
         </Addons>
         <Addons>
-         <Tag placeholder="add your tag" type='text'/>
+          <Tag
+            placeholder="add your tag"
+            type="text"
+            onChange={getTagHandler}
+          />
         </Addons>
         <Addons>
           <h5 className="publish" onClick={clickHandler}>

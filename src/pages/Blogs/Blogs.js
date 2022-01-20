@@ -47,6 +47,7 @@ const Blogs = () => {
                 img={blog.img}
                 title={blog.title}
                 date={blog.date}
+                type={blog.type}
               />
             );
           })}

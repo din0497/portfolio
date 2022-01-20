@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import '../../index.css'
+import "../../index.css";
 export const BlogGrid = styled.div`
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -68,11 +68,10 @@ export const Textarea = styled.textarea`
   width: 100%;
   margin-bottom: 1.25rem;
   @media only screen and (max-width: 450px) {
-   width: 90%;
+    width: 90%;
   }
-  outline:none;
-  border:none;
-
+  outline: none;
+  border: none;
 `;
 
 export const TextareaStory = styled.textarea`
@@ -116,10 +115,10 @@ export const PostImg = styled.img`
 `;
 
 export const PostTitle = styled.h1`
- font-family: 'Fira Sans', sans-serif;
-font-family: 'Lora', serif;
-font-family: 'Mochiy Pop P One', sans-serif;
-font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Lora", serif;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-weight: 400;
   padding: 27px;
   @media only screen and (max-width: 500px) {
     text-align: left;
@@ -135,11 +134,12 @@ export const Demo = styled.img`
 `;
 
 export const Tag = styled.input`
-border: none;
-outline: none;
-color: gray;
-font-weight: 700;
-`
+  width: 80px;
+  border: none;
+  outline: none;
+  color: gray;
+  font-weight: 700;
+`;
 
 const month = [
   "January",
