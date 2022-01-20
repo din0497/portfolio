@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "../index.css";
 
 export const BlogCart = styled.div`
   display: flex;
@@ -18,7 +19,11 @@ export const Img = styled.img`
 `;
 
 export const Title = styled.h3`
- text-align:left;
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Lora", serif;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-weight: 100;
+  text-align: left;
 `;
 
 export const RecentBlogsContainer = styled.div`
@@ -35,7 +40,6 @@ export const MiniContainer = styled.div`
   flex-direction: column;
   max-width: 500px;
   margin-left: 38px;
- 
 `;
 
 export const BlogCartContainer = styled.div`
@@ -74,5 +78,6 @@ export const H2 = styled.h2`
   max-width: 472px;
   text-align: left;
   @media only screen and (max-width: 500px) {
-    width: 300px }
+    width: 300px;
+  }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import '../../index.css'
 export const BlogGrid = styled.div`
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -72,7 +72,7 @@ export const Textarea = styled.textarea`
   }
   outline:none;
   border:none;
-}
+
 `;
 
 export const TextareaStory = styled.textarea`
@@ -116,6 +116,10 @@ export const PostImg = styled.img`
 `;
 
 export const PostTitle = styled.h1`
+ font-family: 'Fira Sans', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Mochiy Pop P One', sans-serif;
+font-weight: 400;
   padding: 27px;
   @media only screen and (max-width: 500px) {
     text-align: left;
