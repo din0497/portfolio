@@ -14,8 +14,12 @@ export const Paragraph = styled.p`
   max-width: 60rem;
   font-size: 20px;
   text-align: start;
-  color: gray;
+  color: black;
   line-height: 2.5rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
 `;
 
 export const Me = styled.img`

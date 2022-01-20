@@ -110,6 +110,9 @@ export const PostImg = styled.img`
   @media only screen and (max-width: 1050px) {
     margin-left: 0;
   }
+  @media only screen and (max-width: 800px) {
+    max-width: 21rem;
+  }
 `;
 
 export const PostTitle = styled.h1`
