@@ -134,6 +134,13 @@ export const Demo = styled.img`
   border-radius: 13px;
 `;
 
+export const Tag = styled.input`
+border: none;
+outline: none;
+color: gray;
+font-weight: 700;
+`
+
 const month = [
   "January",
   "February",

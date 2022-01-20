@@ -1,7 +1,7 @@
 import { Img, Title } from "../../commons/style";
 import { BlogCart } from "./style";
 import { Link } from "react-router-dom";
-const Blog = ({ img, title, date, id }) => {
+const Blog = ({ img, title, date, id, type }) => {
   return (
     <div>
       <BlogCart>
@@ -13,7 +13,7 @@ const Blog = ({ img, title, date, id }) => {
             flexDirection: "column",
           }}
         >
-          <span style={{ marginLeft: "5px", marginTop:'10px', color: "grey" }}>{date}</span>
+          <span style={{ marginLeft: "5px", marginTop:'10px', color: "grey" }}>{date}  #javascript</span>
           <Title><Link style={{textDecoration:'none',color:'black'}} to={`/blog/${id}`}>{title}</Link></Title>
         </div>
       </BlogCart>

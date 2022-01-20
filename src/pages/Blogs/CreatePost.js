@@ -1,4 +1,4 @@
-import { Demo, fullDate, Posting } from "./style";
+import { Demo, fullDate, Posting, Tag } from "./style";
 import { useState, useRef, useEffect } from "react";
 import { AddonsContainer, Textarea, TextareaStory, Addons } from "./style";
 import { MdAddAPhoto } from "react-icons/md";
@@ -21,6 +21,7 @@ const CreatePost = () => {
   const [prog, setProg] = useState(0);
   const [name, getName] = useState(0);
   const [link, setLink] = useState(null);
+  const [type, setType] = useState('refular')
 
   const getTitle = (e) => setTitle(e.target.value);
   const getText = (e) => setText(e.target.value);
@@ -68,6 +69,7 @@ const CreatePost = () => {
     });
 
     sendRequest({
+      type: type,
       title: title,
       img: link,
       text: paragraph,
@@ -94,6 +96,9 @@ const CreatePost = () => {
               "Add photo"
             )}
           </h5>
+        </Addons>
+        <Addons>
+         <Tag placeholder="add your tag" type='text'/>
         </Addons>
         <Addons>
           <h5 className="publish" onClick={clickHandler}>
