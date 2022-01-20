@@ -103,11 +103,13 @@ export const AddonsContainer = styled.div`
 `;
 
 export const PostImg = styled.img`
-width:90%;
-height:auto;
-margin-left: -30px;
-@media only screen and (max-width: 1050px) {
-  margin-left: 0;
+  max-width: 59rem;
+  height: auto;
+  margin-left: -30px;
+  max-height: 26rem;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0;
+  }
 `;
 
 export const PostTitle = styled.h1`

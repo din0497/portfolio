@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 `;
 
 export const Article = styled.article`
@@ -11,19 +11,26 @@ export const Article = styled.article`
 `;
 
 export const Paragraph = styled.p`
-  max-width: 65rem;
-  font-size: 18px;
+  max-width: 60rem;
+  font-size: 20px;
   text-align: start;
   color: gray;
+  line-height: 2.5rem;
 `;
 
 export const Me = styled.img`
-  width: 170px;
+  width: 300px;
   border-radius: 24px;
-  @media only screen and (max-width: 800px) {
-   width: 337px;
+  margin-left: 40px;
+
+  @media only screen and (max-width: 1100px) {
+    margin-left: 0;
   }
-}
+
+  @media only screen and (max-width: 800px) {
+    width: 337px;
+    margin-left: 0;
+  }
 `;
 
 export const MeSection = styled.section`
@@ -65,8 +72,7 @@ export const ContainerWork = styled.div`
 `;
 
 export const Work = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
-
-`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;

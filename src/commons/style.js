@@ -49,6 +49,7 @@ export const BlogCartContainer = styled.div`
   gap: 5px;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
