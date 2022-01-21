@@ -59,10 +59,12 @@ const CreatePost = () => {
   }, [status, history]);
 
   const clickHandler = () => {
-    if (link === null && title === "" && text === "") {
+    console.log(link)
+    if (link === null || title === "" || text === "") {
       alert("Please upload file or wait until uploading complete!");
       return;
     }
+
     let paragraph = [];
     let split = text.split("\n\n");
     split.forEach(function (item) {
