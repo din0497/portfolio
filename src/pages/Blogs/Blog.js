@@ -19,6 +19,7 @@ const Blog = ({ img, title, date, id, type }) => {
           </span>
           <Title>
             <Link
+              onClick={() => window.scrollTo(0,0)}
               style={{ textDecoration: "none", color: "black" }}
               to={`/blog/${id}`}
             >
