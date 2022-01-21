@@ -6,10 +6,19 @@ const Blog = ({ img, title, date, id, type }) => {
     <BlogCart>
       <Img src={img} loading="lazy" />
       <div>
-        <span style={{ marginLeft: "5px", marginTop:'10px', color: "grey" }}>{date}  #{type}</span>
-        <Title><Link style={{textDecoration:'none', color:'black'}} to={`/blog/${id}`}>{title}</Link></Title>
+        <span style={{ marginLeft: "5px", marginTop: "10px", color: "grey" }}>
+          {date}
+          <span style={{ color: "chocolate" }}> #{type}</span>
+        </span>
+        <Title>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to={`/blog/${id}`}
+          >
+            {title}
+          </Link>
+        </Title>
       </div>
-      
     </BlogCart>
   );
 };
