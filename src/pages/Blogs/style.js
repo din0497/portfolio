@@ -106,6 +106,7 @@ export const PostImg = styled.img`
   height: auto;
   margin-left: -30px;
   max-height: 26rem;
+  margin-bottom: 10px;
   @media only screen and (max-width: 1050px) {
     margin-left: 0;
   }
