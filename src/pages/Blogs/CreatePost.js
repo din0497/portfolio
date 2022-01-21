@@ -59,7 +59,7 @@ const CreatePost = () => {
   }, [status, history]);
 
   const clickHandler = () => {
-    console.log(link)
+    console.log(link);
     if (link === null || title === "" || text === "") {
       alert("Please upload file or wait until uploading complete!");
       return;
