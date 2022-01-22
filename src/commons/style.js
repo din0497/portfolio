@@ -72,7 +72,7 @@ export const Button = styled.button`
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   cursor: pointer;
-}
+
 `;
 
 export const H2 = styled.h2`
