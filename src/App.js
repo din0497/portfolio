@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import About from "./pages/About/About";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
@@ -14,8 +14,10 @@ import Post from "./pages/Blogs/Post";
 import { useLayoutEffect } from "react";
 import UserProfile from "./pages/ProfilePage/UserProfile";
 import AuthPage from "./pages/Auth/AuthPage";
+import AuthContext from "./store/auth-contex";
 
 function App() {
+  const authCtx = useContext(AuthContext);
   const [drop, setDrop] = useState("hidden");
   const location = useLocation();
   useLayoutEffect(() => {
@@ -34,8 +36,13 @@ function App() {
           <Route path="/blog" element={<Blogs />} />
           <Route path="blog/create" element={<CreatePost />} />
           <Route path="blog/:id" element={<Post />} />
-          <Route path="/profile" element={<UserProfile />} />
-          <Route path="/auth" element={<AuthPage />} />
+          <Route
+            path="/profile"
+            element={authCtx.isLoggedIn ? <UserProfile /> : <AuthPage />}
+          />
+
+          {!authCtx.isLoggedIn && <Route path="/auth" element={<AuthPage />} />}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
       <Footer />

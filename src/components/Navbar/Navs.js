@@ -36,6 +36,11 @@ const Navs = () => {
           Blog
         </NavLink>
       </Nav>
+      <Nav>
+        <NavLink style={{ textDecoration: "none", color: "gray" }} to="/profile">
+          User
+        </NavLink>
+      </Nav>
       {!isLoggedIn && (
         <Nav>
           <NavLink style={{ textDecoration: "none", color: "gray" }} to="/auth">
@@ -45,12 +50,12 @@ const Navs = () => {
       )}
       {isLoggedIn && (
         <Nav>
-          <NavLink
-            style={{ textDecoration: "none", color: "gray" }}
-            to="/logut"
+          <button
+            onClick={authCtx.logout}
+            style={{ color: "gray", background:'none', border:'none', outline:'none' }}
           >
             Logout
-          </NavLink>
+          </button>
         </Nav>
       )}
     </Wrapper>
