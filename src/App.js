@@ -12,7 +12,6 @@ import Dropdown from "./components/Navbar/Dropdown";
 import CreatePost from "./pages/Blogs/CreatePost";
 import Post from "./pages/Blogs/Post";
 import { useLayoutEffect } from "react";
-import UserProfile from "./pages/ProfilePage/UserProfile";
 import AuthPage from "./pages/Auth/AuthPage";
 import AuthContext from "./store/auth-contex";
 
@@ -34,11 +33,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blogs />} />
-          <Route path="blog/create" element={<CreatePost />} />
           <Route path="blog/:id" element={<Post />} />
           <Route
-            path="/profile"
-            element={authCtx.isLoggedIn ? <UserProfile /> : <AuthPage />}
+            path="blog/create" 
+            element={authCtx.isLoggedIn ? <CreatePost /> : <AuthPage />}
           />
 
           {!authCtx.isLoggedIn && <Route path="/auth" element={<AuthPage />} />}

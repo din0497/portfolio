@@ -36,11 +36,6 @@ const Navs = () => {
           Blog
         </NavLink>
       </Nav>
-      <Nav>
-        <NavLink style={{ textDecoration: "none", color: "gray" }} to="/profile">
-          User
-        </NavLink>
-      </Nav>
       {!isLoggedIn && (
         <Nav>
           <NavLink style={{ textDecoration: "none", color: "gray" }} to="/auth">

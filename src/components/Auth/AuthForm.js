@@ -1,10 +1,11 @@
 import { useState, useRef, useContext } from "react";
 import AuthContext from "../../store/auth-contex";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import classes from "./AuthForm.module.css";
 
 const AuthForm = () => {
+  const location = useLocation();
   const history = useNavigate();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -49,6 +50,9 @@ const AuthForm = () => {
       .then((res) => {
         setIsLoading(false);
         if (res.ok) {
+          !isLogin
+            ? alert("Congratulations! You are successfully signed up!")
+            : alert("Congratulations! You are successfully logged in!");
           return res.json();
         } else {
           return res.json().then((data) => {
@@ -66,7 +70,9 @@ const AuthForm = () => {
           new Date().getTime() + +data.expiresIn * 1000
         );
         authCtx.login(data.idToken, expirationTime.toISOString());
-        history("/", { replace: true });
+        history(location.pathname === "/blog/create" ? "/blog/create" : "/", {
+          replace: true,
+        });
       })
       .catch((err) => {
         alert(err.message);
