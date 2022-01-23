@@ -14,6 +14,7 @@ import Post from "./pages/Blogs/Post";
 import { useLayoutEffect } from "react";
 import AuthPage from "./pages/Auth/AuthPage";
 import AuthContext from "./store/auth-contex";
+import LogIn from "./commons/auth/LogIn";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -34,6 +35,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="blog/:id" element={<Post />} />
+          <Route path="/contact" element={<LogIn/>}/>
           <Route
             path="blog/create" 
             element={authCtx.isLoggedIn ? <CreatePost /> : <AuthPage />}

@@ -6,6 +6,7 @@ import classes from "./AuthForm.module.css";
 
 const AuthForm = () => {
   const location = useLocation();
+  console.log(location.pathname);
   const history = useNavigate();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -70,7 +71,7 @@ const AuthForm = () => {
           new Date().getTime() + +data.expiresIn * 1000
         );
         authCtx.login(data.idToken, expirationTime.toISOString());
-        history(location.pathname === "/blog/create" ? "/blog/create" : "/", {
+        history(location.pathname === "/blog/create" ? "/contact" : "/", {
           replace: true,
         });
       })
