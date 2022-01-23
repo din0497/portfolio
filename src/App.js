@@ -14,6 +14,7 @@ import Post from "./pages/Blogs/Post";
 import { useLayoutEffect } from "react";
 import SignUp from './commons/auth/SignUp'
 import LogIn from "./commons/auth/LogIn";
+import AuthPage from "./pages/Auth/AuthPage";
 
 function App() {
   const [drop, setDrop] = useState("hidden");
@@ -34,8 +35,8 @@ function App() {
           <Route path="/blog" element={<Blogs />} />
           <Route path="blog/create" element={<CreatePost />} />
           <Route path="blog/:id" element={<Post />} />
-          <Route path="/signup" element={<SignUp/>}/>
-          <Route path="/login" element={<LogIn/>}/>
+          {/* <Route path="/signup" element={<SignUp/>}/> */}
+          <Route path="/auth" element={<AuthPage/>}/>
         </Routes>
       </div>
       <Footer />

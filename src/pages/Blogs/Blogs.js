@@ -34,9 +34,9 @@ const Blogs = () => {
           <BlogSk />
         </SkeltonGrid>
       ) : status === "completed" && (!blogs || blogs.length === 0) ? (
-        <p style={{paddingBottom: '131px'}}>no blogs found</p>
+        <p style={{ paddingBottom: "131px" }}>no blogs found</p>
       ) : error ? (
-        <p style={{paddingBottom: '131px'}}>{error}</p>
+        <p style={{ paddingBottom: "131px" }}>{error}</p>
       ) : (
         <BlogGrid>
           {blogs.map((blog, i) => {
