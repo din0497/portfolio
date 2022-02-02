@@ -28,7 +28,6 @@ const ShortIntro = () => {
                 More About me
               </Button>
             </Link>
-            <Link to="#">
               <Button className="button">
                 <a
                   href={cv}
@@ -38,7 +37,6 @@ const ShortIntro = () => {
                   Download CV
                 </a>
               </Button>
-            </Link>
           </ButtonWrapper>
         </TextWrapper>
         <Img src={img} />
