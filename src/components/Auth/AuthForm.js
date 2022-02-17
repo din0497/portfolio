@@ -6,7 +6,6 @@ import classes from "./AuthForm.module.css";
 
 const AuthForm = () => {
   const location = useLocation();
-  console.log(location.pathname);
   const history = useNavigate();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();

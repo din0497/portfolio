@@ -23,6 +23,7 @@ function App() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
   return (
     <main className="header">
       <Navbar drop={drop} setDrop={setDrop} />
