@@ -12,16 +12,6 @@ const Projects = () => {
       <h1 style={{ padding: "0 8px" }}>A selection of my favorite works.</h1>
       <DesWrapper>
         <Description
-          link="https://loadfetcher.com/"
-          title="LoadFetcher"
-          text="LoadFetcher is a multi loadboard search platform. It merges multiple loadboards and makes it easy to see all the loads from different loadboards without logging in each of the loadboards."
-        />
-        <Back>
-          <Img src={loadfetcher} />
-        </Back>
-      </DesWrapper>
-      <DesWrapper>
-        <Description
           link="https://borbaraka.netlify.app/"
           title="Borbaraka"
           text="BorBaraka is Korean Company located in Seoul. I built
@@ -31,6 +21,16 @@ const Projects = () => {
         />
         <Back>
           <Img src={project} />
+        </Back>
+      </DesWrapper>
+      <DesWrapper>
+        <Description
+          link="https://loadfetcher.com/"
+          title="LoadFetcher"
+          text="LoadFetcher is a multi loadboard search platform. It merges multiple loadboards and makes it easy to see all the loads from different loadboards without logging in each of the loadboards."
+        />
+        <Back>
+          <Img src={loadfetcher} />
         </Back>
       </DesWrapper>
       <DesWrapper>

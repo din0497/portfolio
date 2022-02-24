@@ -5,7 +5,7 @@ import { ButtonWrap, DesContainer, ProjectText } from "./style";
 const Description = ({ title, text, link }) => {
   return (
     <DesContainer>
-      <h2 style={{ maxWidth: "22rem", textAlign: "center" }}>{title}</h2>
+      <h2 style={{ maxWidth: "22rem", textAlign: "start" }}>{title}</h2>
       <ProjectText>{text}</ProjectText>
       <ButtonWrap>
         <A href={link} target="_blank">
