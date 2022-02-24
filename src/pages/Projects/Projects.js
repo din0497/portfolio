@@ -3,7 +3,7 @@ import Description from "./Description";
 import { ProductContainer, Img, DesWrapper, Back } from "./style";
 import project from "../../assets/project.png";
 import loadfetcher from "../../assets/loadfetcher.png";
-import hotel2 from "../../assets/hotel2.png";
+import hotel2 from "../../assets/hotel.png";
 
 const Projects = () => {
   return (
@@ -35,9 +35,9 @@ const Projects = () => {
       </DesWrapper>
       <DesWrapper>
         <Description
-          link="https://bill-hotel-site.netlify.app/"
-          title="Bill Hotel"
-          text="Bill Hotel is hotel reservetion app for booking, reserving and browsing hotel rooms. I built it using Ract, React hooks, CSS "
+          link="https://covid-19-monitoring-app.netlify.app/"
+          title="Covid-19 Tracking App"
+          text="Covid tracking app is very useful to track the latest covid cases and vaccinations all over the world from the reliable sources and apis. Its fancy look with an existance of react-simple-maps and charts gives a visitor marvellous user experience. I used Reactjs, Redux, JavaScript, Styled Components, React Simple Maps, Apis, Axios, Figma to build the app."
         />
         <Back>
           <Img src={hotel2} />
